@@ -2,15 +2,19 @@
 By Kyle Rodrigues
 Date: 03032019
 
+**Note: This code works, but soil refresh rate is buggy. need to edit logic flow
+
 DHT22 - D4 pin 2
-Screen - OLED Screen , Addr 0x3C
+Screen - OLED Screen , Addr 0x3C, character uses 5x5 pixels, (X,Y)
 soil capacitive sensor A0
 
 Changes: title change to esp-grow
 -oled delays changed from 1000 to 100
 -DHT if statement >1000 from >2000
 -map function applied to moisture
-- MicroOLED fucntion removed, added 0.96" OLED
+03032019
+- MicroOLED fucntion removed, added 0.96" OLED 
+- DHT22 humidity added to screen reading
 */
 
 //****Include Statements******
@@ -100,7 +104,7 @@ void setup(void) {
 		display.println("Girl Scout Cookies");
 		display.display();       // Refresh the display
 		delay(100);          // Delay a second and repeat
-		display.setCursor(40, 20);
+		display.setCursor(40, 15);
 		display.println("Get WIFI");
 		display.display();
     delay(100);
@@ -118,7 +122,7 @@ void setup(void) {
   delay(100);
   display.setCursor(10, 0); // Set cursor to top-left
   display.println("Girl Scout Cookies");
-  display.setCursor(35, 20);
+  display.setCursor(35, 15);
 	display.println(WiFi.localIP());
 	display.display();
 	delay(100);
@@ -142,11 +146,11 @@ void setup(void) {
 }
 
 void loop(void) {
-  screen();
+  DHT22Sens();
 	moist();
-	DHT22Sens();
+  screen();
 	server.handleClient();
-	delay(100);
+	delay(1000);
 
 }
 
@@ -156,20 +160,20 @@ void screen(void){
   display.setCursor(10, 0);
   display.cp437(true);         // Use full 256 char 'Code Page 437' font
   display.println("Girl Scout Cookies");
-  display.setCursor(35, 20);
+  display.setCursor(35, 15);
   display.println(WiFi.localIP()); 
-  DHT22Sens();
+  DHT22value();
   
 }
 
 void moist() {
 	int mositsens = map(analogRead(0),320,750,100,0);
 	Serial.println(mositsens);
- 	display.setCursor(0, 40);
+ 	display.setCursor(0, 30);
   display.println("Soil:");  
-  display.setCursor(35, 40);
+  display.setCursor(35, 30);
 	display.println(mositsens);  
-  display.setCursor(50, 40);
+  display.setCursor(50, 30);
   display.println("%");
 	display.display();
 	delay(1000);
@@ -194,28 +198,35 @@ void DHT22Sens() {
 		}
 		float hic = dht.computeHeatIndex(t, h, false);
 
-		Serial.print("Humidity: ");
-		Serial.print(h);
-		Serial.print(" %\t");
-		Serial.print("Temperature: ");
-		Serial.print(t);
-		Serial.print(" *C ");
-		Serial.print("Heat index: ");
-		Serial.print(hic);
-		Serial.print(" *C ");
-
-    display.setCursor(50, 40);
-    display.println("DHT22");
-		display.setCursor(70, 40);
-		display.println(t);
-    display.setCursor(85, 40);
-    display.println("C");
-		display.display();
-		delay(100);          // Delay a second and repeat
-		display.display();
+//		Serial.print("Humidity: ");
+//		Serial.print(h);
+//		Serial.print(" %\t");
+//		Serial.print("Temperature: ");
+//		Serial.print(t);
+//		Serial.print(" *C ");
+//		Serial.print("Heat index: ");
+//		Serial.print(hic);
+//		Serial.print(" *C ");
 
 		timeSinceLastRead = 0;
 	}
+}
+
+ //This holds the current value of the DHT22 from the last read
+    void DHT22value (void){
+      display.setCursor(0, 40);
+      display.println("DHT22:");
+      display.setCursor(35, 40);
+      display.println(dht.readTemperature());
+      display.setCursor(70, 40);
+      display.println("oC");
+      display.setCursor(35, 50);
+      display.println(dht.readHumidity());
+      display.setCursor(70, 50);
+      display.println("%");
+      display.display();
+      delay(100);          // Delay a second and repeat
+      display.display();
 }
 
 void webupdate(){
