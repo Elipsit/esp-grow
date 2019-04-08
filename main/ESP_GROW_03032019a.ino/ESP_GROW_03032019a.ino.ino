@@ -50,7 +50,6 @@ const char* ssid = "Pretty Fly For A Wifi-2.4";
 const char* password = "supercarbon";
 ESP8266WebServer server(80);
 
-
 void handleRoot() {
 	server.send(200, "text/bold", "ESP-Grow");
 }
