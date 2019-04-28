@@ -1,0 +1,4 @@
+Added Component: Designator=ST1(SharkTooth)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=NetC3_1 Pin=ST1-1
+Added Pin To Net: NetName=3.3V Pin=ST1-2

@@ -1,0 +1,5 @@
+Added Pin To Net: NetName=GND Pin=CN6-2
+Added Pin To Net: NetName=12V Pin=CN6-1
+Added Net: Name=12V
+Added Pin To Net: NetName=DHT22 Pin=CN2-2
+Added Net: Name=DHT22

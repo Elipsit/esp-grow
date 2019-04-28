@@ -1,0 +1,6 @@
+Change Component Comment : Designator=CN6 Old Comment=MICROFIT 3.0 HDR VERT CPI 2CKT New Comment=Aux Pwr
+Added Pin To Net: NetName=GND Pin=C3-2
+Added Pin To Net: NetName=GND Pin=C4-2
+Added Pin To Net: NetName=GND Pin=C5-2
+Added Pin To Net: NetName=GND Pin=U2-1
+Added Pin To Net: NetName=NetC3_1 Pin=U2-4

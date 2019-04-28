@@ -1,0 +1,8 @@
+﻿Part,Manufacturer,Part Number,Quantity,Price ($),Footprint (mm²),Description
+Cin,TDK,C2012X6S1C226M125AC,1,0.26,6.75,Cap: 22 µF  Total Derated Cap: 5.5 µF  VDC: 16 V  ESR: 2.05 mΩ  Package: 0805  
+Rfbb,Yageo,RC0201FR-0710KL,1,0.01,2.08,Resistance: 10 kΩ  Tolerance: 1.0%  Power: 50 mW  
+U1,Texas Instruments,TPS562209DDCR,1,0.4,10.47,
+Cbst,Kemet,C0603C104Z3VACTU,1,0.01,4.68,Cap: 100 nF  Total Derated Cap: 100 nF  VDC: 25 V  ESR: 1 mΩ  Package: 0603  
+Cout,TDK,C1608X5R1A226M080AC,1,0.13,4.68,Cap: 22 µF  Total Derated Cap: 4.5 µF  VDC: 10 V  ESR: 3.71 mΩ  Package: 0603  
+L1,Bourns,SRN6045-4R7Y,1,0.2,64,L: 4.7 µH  DCR: 37.6 mΩ  IDC: 3 A  
+Rfbt,Yageo,RC0201FR-0756K2L,1,0.01,2.08,Resistance: 56.2 kΩ  Tolerance: 1.0%  Power: 50 mW  

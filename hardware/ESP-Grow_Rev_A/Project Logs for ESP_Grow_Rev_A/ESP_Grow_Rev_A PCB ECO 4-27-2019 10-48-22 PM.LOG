@@ -1,0 +1,160 @@
+Change Component Footprint: Designator=CN4 Old Footprint=Molex 1x2 Microfit 90deg New Footprint=Molex 1x2 Microfit 90deg
+Change Component Footprint: Designator=CN2 Old Footprint=Molex 1x3 Microfit 90deg New Footprint=Molex 1x3 Microfit 90deg
+Change Component Footprint: Designator=CN3 Old Footprint=Molex 1x3 Microfit 90deg New Footprint=Molex 1x3 Microfit 90deg
+Change Component Footprint: Designator=CN5 Old Footprint=Molex 2x2 Microfit 90deg New Footprint=Molex 2x2 Microfit 90deg
+Added Component: Designator=J2(CONN_PWR_JACK_2.1x5.5mm)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Color"; Value = "Black"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://domino.kycon.com/internet/Products.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "http://www.cui.com/product/resource/digikeypdf/pj-002a.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.cui.com/product/resource/digikeypdf/pj-002a.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "http://www.cui.com/product/resource/digikeypdf/pj-002ah.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "http://www.cui.com/product/resource/digikeypdf/pj-002ah.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Component Name"; Value = "CONN PWR JACK 2.1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Connector Type"; Value = "Jack"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Material"; Value = "Copper Alloy"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Material - Plating"; Value = "Tin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current Rating"; Value = "2.5A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetDocument"; Value = "09-May-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Features"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Gender"; Value = "Male"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Housing Color"; Value = "Black"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Housing Material"; Value = "Thermoplastic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Internal Switch(s)"; Value = "Single Switch, Normally Closed"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "CUI Inc"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "PJ-002A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Through Hole, Right Angle"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Positions/Contacts"; Value = "2 Conductors, 3 Contacts"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-25°C ~ 85°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pin Count"; Value = "3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Plug/Mating Plug Diameter"; Value = "2.1mm ID, 5.5mm OD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=1.01, 10=0.704, 100=0.4724, 500=0.3819, 1000=0.3417, 2500=0.27135 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "17-Dec-2003"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "RoHS Compliant"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Shielding"; Value = "Unshielded"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "47553"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "Solder Eyelet(s)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage - Rated"; Value = "16VDC"; VariantName = "[No Variations]"
+Added Component: Designator=R1(RESC0603(1608)_M)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Height"; Value = "550µm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package (Imperial)"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package (Metric)"; Value = "1608"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "100mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistance"; Value = "10k"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Coefficient"; Value = "±100ppm/°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R2(RESC0603(1608)_M)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Height"; Value = "550µm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package (Imperial)"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package (Metric)"; Value = "1608"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "100mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistance"; Value = "10k"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Coefficient"; Value = "±100ppm/°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R3(RESC0603(1608)_M)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Height"; Value = "550µm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package (Imperial)"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package (Metric)"; Value = "1608"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "100mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistance"; Value = "10k"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Coefficient"; Value = "±100ppm/°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=S1(EG1213)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Component Name"; Value = "EG1213"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "E-Switch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MPN"; Value = "EG1213"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pin Count"; Value = "3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PN"; Value = "EG1906-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Digikey"; VariantName = "[No Variations]"
+Added Component: Designator=SW1(SW TACT Red 6mm x 6mm)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Actuator Height off PCB, Vertical"; Value = "4.30mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Actuator Length, Right Angle"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Actuator Material"; Value = "Polyamide (PA66), Nylon 6/6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Actuator Orientation"; Value = "Top Actuated"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Actuator Type"; Value = "Standard"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Circuit"; Value = "SPST-NO"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ClassName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.ckswitches.com/media/1471/pts645.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.ckswitches.com/media/1471/pts645.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Component Name"; Value = "PTS645SM43SMTR92 LFS"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Rating @ Voltage"; Value = "0.05A @ 12VDC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Features"; Value = "Blue Actuator"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Illumination"; Value = "Non-Illuminated"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Illumination Type, Color"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Illumination Voltage (Nominal)"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ingress Protection"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "C&K"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "PTS645SM43SMTR92 LFS"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mechanical Life"; Value = "100,000 Cycles"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Type"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Force"; Value = "160gf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-20°C ~ 60°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Outline"; Value = "6.00mm x 6.00mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Cut Tape (CT)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Status"; Value = "Active"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pin Count"; Value = "4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=0.15, 10=0.147, 25=0.1416, 50=0.1366, 100=0.129, 250=0.12144, 500=0.11638 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "RoHS Compliant"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "234699"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Switch Function"; Value = "Off-Mom"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Switch Travel"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination Style"; Value = "Gull Wing"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=3.3V Pin=CN1-8
+Added Pin To Net: NetName=3.3V Pin=J1-1
+Added Pin To Net: NetName=3.3V Pin=R1-1
+Added Pin To Net: NetName=3.3V Pin=R2-1
+Added Pin To Net: NetName=3.3V Pin=R3-1
+Added Net: Name=3.3V
+Added Pin To Net: NetName=BTN Pin=R1-2
+Added Pin To Net: NetName=BTN Pin=SW1-2
+Added Net: Name=BTN
+Added Pin To Net: NetName=GND Pin=CN1-10
+Added Pin To Net: NetName=GND Pin=J1-2
+Added Pin To Net: NetName=GND Pin=SW1-4
+Added Net: Name=GND
+Added Pin To Net: NetName=NetC3_1 Pin=C3-1
+Added Pin To Net: NetName=NetC3_1 Pin=C4-1
+Added Pin To Net: NetName=NetC3_1 Pin=C5-1
+Added Pin To Net: NetName=NetC3_1 Pin=U2-2
+Added Net: Name=NetC3_1
+Added Pin To Net: NetName=OLED_SCL Pin=J1-3
+Added Pin To Net: NetName=OLED_SCL Pin=R3-2
+Added Net: Name=OLED_SCL
+Added Pin To Net: NetName=OLED_SDA Pin=J1-4
+Added Pin To Net: NetName=OLED_SDA Pin=R2-2
+Added Net: Name=OLED_SDA
+Added Pin To Net: NetName=SOIL_SEN Pin=CN1-2
+Added Pin To Net: NetName=SOIL_SEN Pin=CN3-2
+Added Net: Name=SOIL_SEN
+Added Member To Class: ClassName=ESP_Grow_Rev_A Member=Component J2 CONN PWR JACK 2.1
+Added Member To Class: ClassName=ESP_Grow_Rev_A Member=Component R1 10K
+Added Member To Class: ClassName=ESP_Grow_Rev_A Member=Component R2 10K
+Added Member To Class: ClassName=ESP_Grow_Rev_A Member=Component R3 10K
+Added Member To Class: ClassName=ESP_Grow_Rev_A Member=Component S1 EG1213
+Added Member To Class: ClassName=ESP_Grow_Rev_A Member=Component SW1 PTS645SM43SMTR92 LFS
+Added Room: Name=ESP_Grow_Rev_A

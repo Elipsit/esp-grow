@@ -1,0 +1,8 @@
+Added Component: Designator=CN*(Wemos_d1)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Name"; Value = "Wemo Mini Shield"; VariantName = "[No Variations]"
+Added Component: Designator=J1(OLED_0.96_I2C)
+Add component. Clean all parameters for all variants
+Added Member To Class: ClassName=ESP_Grow_Rev_A Member=Component CN* J/Wemo_ESP_Shield
+Added Member To Class: ClassName=ESP_Grow_Rev_A Member=Component J1 OLED 0.96"
+Added Room: Name=ESP_Grow_Rev_A
