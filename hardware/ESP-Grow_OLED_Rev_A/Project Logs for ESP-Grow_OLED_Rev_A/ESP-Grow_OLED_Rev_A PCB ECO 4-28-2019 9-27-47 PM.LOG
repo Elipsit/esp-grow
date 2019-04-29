@@ -1,0 +1,20 @@
+Added Component: Designator=CN1(Wemos_d1)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Name"; Value = "Wemo Mini Shield"; VariantName = "[No Variations]"
+Added Component: Designator=J1(OLED_0.96_I2C)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=3.3V Pin=CN1-8
+Added Pin To Net: NetName=3.3V Pin=J1-1
+Added Net: Name=3.3V
+Added Net: Name=BTN
+Added Pin To Net: NetName=GND Pin=CN1-10
+Added Pin To Net: NetName=GND Pin=J1-2
+Added Net: Name=GND
+Added Pin To Net: NetName=OLED_SCL Pin=CN1-14
+Added Pin To Net: NetName=OLED_SCL Pin=J1-3
+Added Net: Name=OLED_SCL
+Added Pin To Net: NetName=OLED_SDA Pin=CN1-13
+Added Pin To Net: NetName=OLED_SDA Pin=J1-4
+Added Net: Name=OLED_SDA
+Added Class: Name=ESP-Grow_OLED_Rev_A
+Added Room: Name=ESP-Grow_OLED_Rev_A

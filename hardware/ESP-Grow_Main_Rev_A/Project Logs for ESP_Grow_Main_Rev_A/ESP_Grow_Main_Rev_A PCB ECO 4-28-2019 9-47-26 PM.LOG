@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=3.3V Pin=J1-1
+Removed Pin From Net: NetName=GND Pin=J1-2
+Removed Pin From Net: NetName=3.3V Pin=R2-1
+Removed Pin From Net: NetName=3.3V Pin=R3-1
