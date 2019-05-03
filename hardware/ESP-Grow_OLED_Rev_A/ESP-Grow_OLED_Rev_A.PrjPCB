@@ -28,7 +28,7 @@ DItemRevisionGUID=
 ReportSuppressedErrorsInMessages=0
 FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
-OutputPath=Project Outputs for ESP-Grow_OLED_Rev_A
+OutputPath=
 LogFolderPath=
 ManagedProjectGUID=
 IncludeDesignInRelease=0
@@ -105,182 +105,6 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[GeneratedDocument1]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\ODB++ Files\odb\steps\pcb\layers\comp_+_top\components
-DItemRevisionGUID=
-
-[GeneratedDocument2]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\ODB++ Files\odb\steps\pcb\eda\data
-DItemRevisionGUID=
-
-[GeneratedDocument3]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\Design Rule Check - ESP-Grow_OLED_Rev_A.html
-DItemRevisionGUID=
-
-[GeneratedDocument4]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\NC Drill Files\ESP-Grow_OLED_Rev_A.DRR
-DItemRevisionGUID=
-
-[GeneratedDocument5]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\Gerber Files\ESP-Grow_OLED_Rev_A.EXTREP
-DItemRevisionGUID=
-
-[GeneratedDocument6]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\Gerber Files\ESP-Grow_OLED_Rev_A.GBL
-DItemRevisionGUID=
-
-[GeneratedDocument7]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\Gerber Files\ESP-Grow_OLED_Rev_A.GBO
-DItemRevisionGUID=
-
-[GeneratedDocument8]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\Gerber Files\ESP-Grow_OLED_Rev_A.GBP
-DItemRevisionGUID=
-
-[GeneratedDocument9]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\Gerber Files\ESP-Grow_OLED_Rev_A.GBS
-DItemRevisionGUID=
-
-[GeneratedDocument10]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\Gerber Files\ESP-Grow_OLED_Rev_A.GD1
-DItemRevisionGUID=
-
-[GeneratedDocument11]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\Gerber Files\ESP-Grow_OLED_Rev_A.GG1
-DItemRevisionGUID=
-
-[GeneratedDocument12]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\Gerber Files\ESP-Grow_OLED_Rev_A.GKO
-DItemRevisionGUID=
-
-[GeneratedDocument13]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\Gerber Files\ESP-Grow_OLED_Rev_A.GM1
-DItemRevisionGUID=
-
-[GeneratedDocument14]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\Gerber Files\ESP-Grow_OLED_Rev_A.GM8
-DItemRevisionGUID=
-
-[GeneratedDocument15]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\Gerber Files\ESP-Grow_OLED_Rev_A.GM13
-DItemRevisionGUID=
-
-[GeneratedDocument16]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\Gerber Files\ESP-Grow_OLED_Rev_A.GM15
-DItemRevisionGUID=
-
-[GeneratedDocument17]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\Gerber Files\ESP-Grow_OLED_Rev_A.GM22
-DItemRevisionGUID=
-
-[GeneratedDocument18]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\Gerber Files\ESP-Grow_OLED_Rev_A.GPB
-DItemRevisionGUID=
-
-[GeneratedDocument19]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\Gerber Files\ESP-Grow_OLED_Rev_A.GPT
-DItemRevisionGUID=
-
-[GeneratedDocument20]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\Gerber Files\ESP-Grow_OLED_Rev_A.GTL
-DItemRevisionGUID=
-
-[GeneratedDocument21]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\Gerber Files\ESP-Grow_OLED_Rev_A.GTO
-DItemRevisionGUID=
-
-[GeneratedDocument22]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\Gerber Files\ESP-Grow_OLED_Rev_A.GTP
-DItemRevisionGUID=
-
-[GeneratedDocument23]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\Gerber Files\ESP-Grow_OLED_Rev_A.GTS
-DItemRevisionGUID=
-
-[GeneratedDocument24]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\NC Drill Files\ESP-Grow_OLED_Rev_A.LDP
-DItemRevisionGUID=
-
-[GeneratedDocument25]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\Gerber Files\ESP-Grow_OLED_Rev_A.REP
-DItemRevisionGUID=
-
-[GeneratedDocument26]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\ODB++ Files\ESP-Grow_OLED_Rev_A.REP
-DItemRevisionGUID=
-
-[GeneratedDocument27]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\Gerber Files\ESP-Grow_OLED_Rev_A.RUL
-DItemRevisionGUID=
-
-[GeneratedDocument28]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\NC Drill Files\ESP-Grow_OLED_Rev_A.TXT
-DItemRevisionGUID=
-
-[GeneratedDocument29]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\ODB++ Files\odb\steps\pcb\layers\bottom_layer\features
-DItemRevisionGUID=
-
-[GeneratedDocument30]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\ODB++ Files\odb\steps\pcb\layers\bottom_overlay\features
-DItemRevisionGUID=
-
-[GeneratedDocument31]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\ODB++ Files\odb\steps\pcb\layers\bottom_paste\features
-DItemRevisionGUID=
-
-[GeneratedDocument32]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\ODB++ Files\odb\steps\pcb\layers\bottom_solder\features
-DItemRevisionGUID=
-
-[GeneratedDocument33]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\ODB++ Files\odb\steps\pcb\layers\comp_+_top\features
-DItemRevisionGUID=
-
-[GeneratedDocument34]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\ODB++ Files\odb\steps\pcb\layers\drill\features
-DItemRevisionGUID=
-
-[GeneratedDocument35]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\ODB++ Files\odb\steps\pcb\layers\keep-out_layer\features
-DItemRevisionGUID=
-
-[GeneratedDocument36]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\ODB++ Files\odb\steps\pcb\layers\top_layer\features
-DItemRevisionGUID=
-
-[GeneratedDocument37]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\ODB++ Files\odb\steps\pcb\layers\top_overlay\features
-DItemRevisionGUID=
-
-[GeneratedDocument38]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\ODB++ Files\odb\steps\pcb\layers\top_paste\features
-DItemRevisionGUID=
-
-[GeneratedDocument39]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\ODB++ Files\odb\steps\pcb\layers\top_solder\features
-DItemRevisionGUID=
-
-[GeneratedDocument40]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\ODB++ Files\odb\matrix\matrix
-DItemRevisionGUID=
-
-[GeneratedDocument41]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\ODB++ Files\odb\steps\pcb\netlists\cadnet\netlist
-DItemRevisionGUID=
-
-[GeneratedDocument42]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\ODB++ Files\odb\steps\pcb\profile
-DItemRevisionGUID=
-
-[GeneratedDocument43]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\ODB++ Files\odb\steps\pcb\stephdr
-DItemRevisionGUID=
-
-[GeneratedDocument44]
-DocumentPath=Project Outputs for ESP-Grow_OLED_Rev_A\ODB++ Files\odb\steps\pcb\layers\drill\tools
-DItemRevisionGUID=
-
 [Configuration1]
 Name=Sources
 ParameterCount=0
@@ -328,7 +152,7 @@ SCH_HasExpandLogicalToPhysicalSheets=-1
 SaveSettingsToOutJob=-1
 
 [Generic_EDE]
-OutputDir=Project Outputs for ESP-Grow_OLED_Rev_A
+OutputDir=
 
 [OutputGroup1]
 Name=Netlist Outputs
