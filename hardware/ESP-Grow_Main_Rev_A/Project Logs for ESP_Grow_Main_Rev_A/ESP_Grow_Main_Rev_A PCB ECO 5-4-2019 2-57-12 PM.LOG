@@ -1,0 +1,4 @@
+Change Component Comment : Designator=J2 Old Comment=12V New Comment=CONN PWR JACK 2.1
+Added Pin To Net: NetName=12V Pin=J2-1
+Added Pin To Net: NetName=GND Pin=J2-2
+Added Pin To Net: NetName=GND Pin=J2-3
