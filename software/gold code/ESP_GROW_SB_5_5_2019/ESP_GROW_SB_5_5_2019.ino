@@ -13,6 +13,7 @@ Screen - OLED Screen , Addr 0x3C, character uses 5x5 pixels, (X,Y)
 soil capacitive sensor A0
 
 Changes:
+-5/5/2019 - added plant description
 -Soil Sens Error Added; no soil detected and no sensor detected
 -adding variable for button 
 -water pump added; set to water for 10 sec when soil is < 50% moisture
@@ -114,7 +115,7 @@ Serial.begin(115200);
     delay(100);
     display.display();
     server.on("/", [](){
-    page = "<h1>ESP-GROW Web Server</h1></h2>By: Kyle Rodrigues | 03/03/2019</h2><h3>Soil Moisture Content(%):</h3> <h4>"+String(soilval)+"</h4><h3>Temperature(oC):</h3> <h4>"+String(t)+"</h4><h3>Humidity(%):</h3> <h4>"+String(h)+"</h4>";
+    page = "<h1>ESP-GROW Strawberry Banana</h1></h2>By: Kyle Rodrigues | 05/05/2019</h2></p>Strawberry Banana is a 70/30 indica-dominant cannabis strain developed by DNA Genetics in collaboration with Serious Seeds. A genetic cross between Crocketts Banana Kush and the *Strawberry* phenotype of Bubble Gum, Strawberry Banana inherits a sweet fruity flavor that earned this hybrid her name. Known for its heavy resin production and high THC content, Strawberry Banana produces happy, peaceful effects that sharpen creativity and sensory awareness.</p><h3>Soil Moisture Content(%):</h3> <h4>"+String(soilval)+"</h4><h3>Temperature(oC):</h3> <h4>"+String(t)+"</h4><h3>Humidity(%):</h3> <h4>"+String(h)+"</h4>";
     server.send(200, "text/html", page);
   });
   
