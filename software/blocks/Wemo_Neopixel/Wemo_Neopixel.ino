@@ -19,7 +19,7 @@
 // strandtest example for more information on possible values.
 Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
-#define DELAYVAL 100 // Time (in milliseconds) to pause between pixels
+#define DELAYVAL 50 // Time (in milliseconds) to pause between pixels
 
 void setup() {
   // These lines are specifically to support the Adafruit Trinket 5V 16 MHz.
@@ -35,6 +35,8 @@ void setup() {
 void loop() {
     
   pixels.clear(); // Set all pixel colors to 'off'
+
+  while(1){
 
   // The first NeoPixel in a strand is #0, second is 1, all the way up
   // to the count of pixels minus one.
@@ -109,5 +111,6 @@ void loop() {
     pixels.show();   // Send the updated pixel colors to the hardware.
 
     delay(DELAYVAL); // Pause before next pass through loop
+  }
   }
 }

@@ -1,4 +1,4 @@
-/*ESP-Grow - No WIFI
+/*ESP-Grow
 By Kyle Rodrigues
 Date: 04/07/2019
 

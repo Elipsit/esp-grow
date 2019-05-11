@@ -1,0 +1,428 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD18\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">5/10/2019</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">8:46:07 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:03</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc" class="file"><acronym title="C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc">C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">28</td></tr>
+</table>
+</td>
+</table><a name="IDYLYLYK2DUHFWLU5SK2412KPRFCDF4OYU0BRPBGMJWZIKEXVL5RIJ"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDPMXCHTFWXNZEG5J3RSZUGCHGDK4I1VDVXSBIHZDUK2JPIGCOB4PC">Clearance Constraint (Gap=10mil) (All),(All)</a></td>
+<td class="column2">8</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDRSDLTPY5UIFCMCGDW3H5MIR40MKEXOWZ4UWTG1VIZRL52VS0STB">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDVR4DGEVO10R4DWIFHLBZCGRESJDC01OUSAJRDHKDLPJI0YA23I1C">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDJMAHPZNF2ZMHMKVATV35IBBUKKQIJD0XAQCRXPNG1TOX10G1ONEP">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDVGRUFXQYXS2HKHFN3DY41WUHKOF1GA53BZUPXUJCK410JJX31TYB">Width Constraint (Min=6mil) (Max=300mil) (Preferred=10mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDE5P0MSWCKOONKNN42ZLLEZZ0MLWB5SH4P5FCHNU5XZDUWUV0TKE">Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDITK5GAYEUJ1ZHDUAQWKNQA1ZEMAHULLKHESTETCZC1CBS45CYIUC">Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (InNet('NetC6_1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQRQ1ODY5QYXMN5WRN2VJSDM4PCCHSCFRF1G31WOL4V3DJCIAXRRF">Hole Size Constraint (Min=1mil) (Max=250mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID3D3WPFGOPQLDC5ZXAXIHC2HKTF34OMBNDPMQ3XJHFQAUOHFPJPDI">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDVH1LWHKF0IUKQ2NWCCZYVBWA114PILKI4UUMN50PMFYH5GFMM">Minimum Solder Mask Sliver (Gap=0mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNSVINIW2Y2KHMPPWFU32JR0BULOLW4M5OVDJ12YRU0ENVUGFOI">Silk To Solder Mask (Clearance=1mil) (IsPad),(All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDY3MXYFD0JA5JL2ASPV2MY14IFBP4L4GAXZWSL5L50YUMHAWVBLPB">Silk to Silk (Clearance=2mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID5ARLD4UUQROVHQRHQV5POQYAFI1AVPX0XQKWSKHQWTS2WQZZSQGD">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUW4504H2W4MDJ2FHZD2ZDHFWVN2RYE1MOHKHUGGV4ICKTJNJA3KF">Board Clearance Constraint (Gap=0mil) (All)</a></td>
+<td class="column2">19</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID423TCZ55KIDEMURCODCC4DW04G5KWM2BU1TUWYJI4SDWB1K2HUN">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">28</td>
+</tr>
+</table><br><a name="IDPMXCHTFWXNZEG5J3RSZUGCHGDK4I1VDVXSBIHZDUK2JPIGCOB4PC"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=10mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8411.067mil|Location2.X=8422.317mil|Location1.Y=4413.562mil|Location2.Y=4424.812mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8411.067mil|Location2.X=8422.317mil|Location1.Y=4413.562mil|Location2.Y=4424.812mil|Absolute=True">Clearance Constraint: (7.781mil &lt; 10mil) Between Region (0 hole(s)) Top Layer And Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9834.539mil|Location2.X=9845.789mil|Location1.Y=3212.684mil|Location2.Y=3223.934mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9834.539mil|Location2.X=9845.789mil|Location1.Y=3212.684mil|Location2.Y=3223.934mil|Absolute=True">Clearance Constraint: (7.781mil &lt; 10mil) Between Region (0 hole(s)) Top Layer And Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9834.033mil|Location2.X=9845.283mil|Location1.Y=3171.456mil|Location2.Y=3182.706mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9834.033mil|Location2.X=9845.283mil|Location1.Y=3171.456mil|Location2.Y=3182.706mil|Absolute=True">Clearance Constraint: (9.091mil &lt; 10mil) Between Region (0 hole(s)) Top Layer And Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8452.294mil|Location2.X=8463.544mil|Location1.Y=4413.057mil|Location2.Y=4424.307mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8452.294mil|Location2.X=8463.544mil|Location1.Y=4413.057mil|Location2.Y=4424.307mil|Absolute=True">Clearance Constraint: (9.091mil &lt; 10mil) Between Region (0 hole(s)) Top Layer And Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9847.475mil|Location2.X=9858.725mil|Location1.Y=3155.248mil|Location2.Y=3166.498mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9847.475mil|Location2.X=9858.725mil|Location1.Y=3155.248mil|Location2.Y=3166.498mil|Absolute=True">Clearance Constraint: (9.876mil &lt; 10mil) Between Region (0 hole(s)) Top Layer And Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8437.006mil|Location2.X=8448.256mil|Location1.Y=4426.498mil|Location2.Y=4437.748mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8437.006mil|Location2.X=8448.256mil|Location1.Y=4426.498mil|Location2.Y=4437.748mil|Absolute=True">Clearance Constraint: (9.876mil &lt; 10mil) Between Region (0 hole(s)) Top Layer And Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8468.502mil|Location2.X=8479.752mil|Location1.Y=4426.498mil|Location2.Y=4437.748mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8468.502mil|Location2.X=8479.752mil|Location1.Y=4426.498mil|Location2.Y=4437.748mil|Absolute=True">Clearance Constraint: (9.876mil &lt; 10mil) Between Region (0 hole(s)) Top Layer And Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9847.475mil|Location2.X=9858.725mil|Location1.Y=3186.744mil|Location2.Y=3197.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9847.475mil|Location2.X=9858.725mil|Location1.Y=3186.744mil|Location2.Y=3197.994mil|Absolute=True">Clearance Constraint: (9.876mil &lt; 10mil) Between Region (0 hole(s)) Top Layer And Region (0 hole(s)) Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDNSVINIW2Y2KHMPPWFU32JR0BULOLW4M5OVDJ12YRU0ENVUGFOI"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=1mil) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9344.144mil|Location2.X=9345.81mil|Location1.Y=5337.946mil|Location2.Y=5339.613mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9344.144mil|Location2.X=9345.81mil|Location1.Y=5337.946mil|Location2.Y=5339.613mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 1mil) Between Pad J2-1(1460mil,2683.78mil) on Multi-Layer And Track (1282.835mil,2683.78mil)(1637.165mil,2683.78mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDUW4504H2W4MDJ2FHZD2ZDHFWVN2RYE1MOHKHUGGV4ICKTJNJA3KF"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Board Clearance Constraint (Gap=0mil) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8052.619mil|Location2.X=8060.286mil|Location1.Y=5072.015mil|Location2.Y=5079.681mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8052.619mil|Location2.X=8060.286mil|Location1.Y=5072.015mil|Location2.Y=5079.681mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 10mil) Between Board Edge And Track (-12.155mil,2224.24mil)(295.06mil,2617.457mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7934.251mil|Location2.X=7941.917mil|Location1.Y=4847.226mil|Location2.Y=4854.893mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7934.251mil|Location2.X=7941.917mil|Location1.Y=4847.226mil|Location2.Y=4854.893mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 10mil) Between Board Edge And Track (-12.155mil,2224.24mil)(295.957mil,1983.516mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9194.001mil|Location2.X=9201.668mil|Location1.Y=5770.168mil|Location2.Y=5777.835mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9194.001mil|Location2.X=9201.668mil|Location1.Y=5770.168mil|Location2.Y=5777.835mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 10mil) Between Board Edge And Track (1282.835mil,2862.78mil)(1282.835mil,3223.15mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9371.167mil|Location2.X=9378.833mil|Location1.Y=5839.946mil|Location2.Y=5847.613mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9371.167mil|Location2.X=9378.833mil|Location1.Y=5839.946mil|Location2.Y=5847.613mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 10mil) Between Board Edge And Track (1282.835mil,3188.78mil)(1637.165mil,3188.78mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9371.167mil|Location2.X=9378.833mil|Location1.Y=5874.316mil|Location2.Y=5881.983mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9371.167mil|Location2.X=9378.833mil|Location1.Y=5874.316mil|Location2.Y=5881.983mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 10mil) Between Board Edge And Track (1282.835mil,3223.15mil)(1637.165mil,3223.15mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9548.332mil|Location2.X=9555.999mil|Location1.Y=5770.168mil|Location2.Y=5777.835mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9548.332mil|Location2.X=9555.999mil|Location1.Y=5770.168mil|Location2.Y=5777.835mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 10mil) Between Board Edge And Track (1637.165mil,2683.78mil)(1637.165mil,3223.15mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10798.34mil|Location2.X=10806.006mil|Location1.Y=3333.037mil|Location2.Y=3340.704mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10798.34mil|Location2.X=10806.006mil|Location1.Y=3333.037mil|Location2.Y=3340.704mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 10mil) Between Board Edge And Track (2559.266mil,800.964mil)(2926.686mil,667.234mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10864.246mil|Location2.X=10871.913mil|Location1.Y=4644.933mil|Location2.Y=4652.599mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10864.246mil|Location2.X=10871.913mil|Location1.Y=4644.933mil|Location2.Y=4652.599mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 10mil) Between Board Edge And Track (2617.307mil,1934.739mil)(2966.254mil,1996.268mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10927.837mil|Location2.X=10935.503mil|Location1.Y=4360.166mil|Location2.Y=4367.833mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10927.837mil|Location2.X=10935.503mil|Location1.Y=4360.166mil|Location2.Y=4367.833mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 10mil) Between Board Edge And Track (2667.897mil,1647.826mil)(3016.845mil,1709.355mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10966.679mil|Location2.X=10974.346mil|Location1.Y=3803.224mil|Location2.Y=3810.891mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10966.679mil|Location2.X=10974.346mil|Location1.Y=3803.224mil|Location2.Y=3810.891mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 10mil) Between Board Edge And Track (2729.934mil,1269.87mil)(3097.354mil,1136.14mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7982.627mil|Location2.X=7990.293mil|Location1.Y=3259.637mil|Location2.Y=3267.303mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7982.627mil|Location2.X=7990.293mil|Location1.Y=3259.637mil|Location2.Y=3267.303mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 10mil) Between Board Edge And Track (28.062mil,594.228mil)(515.003mil,752.444mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10923.187mil|Location2.X=10930.853mil|Location1.Y=3552.854mil|Location2.Y=3560.52mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10923.187mil|Location2.X=10930.853mil|Location1.Y=3552.854mil|Location2.Y=3560.52mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 10mil) Between Board Edge And Track (2926.686mil,667.234mil)(3097.354mil,1136.14mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8236.587mil|Location2.X=8244.254mil|Location1.Y=5245.034mil|Location2.Y=5252.7mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8236.587mil|Location2.X=8244.254mil|Location1.Y=5245.034mil|Location2.Y=5252.7mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 10mil) Between Board Edge And Track (295.06mil,2617.457mil)(603.173mil,2376.733mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10902.716mil|Location2.X=10910.383mil|Location1.Y=4503.978mil|Location2.Y=4511.645mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10902.716mil|Location2.X=10910.383mil|Location1.Y=4503.978mil|Location2.Y=4511.645mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 10mil) Between Board Edge And Track (2966.254mil,1996.268mil)(3016.845mil,1709.355mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8642.204mil|Location2.X=8649.87mil|Location1.Y=5525.013mil|Location2.Y=5532.68mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8642.204mil|Location2.X=8649.87mil|Location1.Y=5525.013mil|Location2.Y=5532.68mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 10mil) Between Board Edge And Track (720.549mil,2899.052mil)(853.283mil,2570.523mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8766.778mil|Location2.X=8774.444mil|Location1.Y=5604.788mil|Location2.Y=5612.454mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8766.778mil|Location2.X=8774.444mil|Location1.Y=5604.788mil|Location2.Y=5612.454mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 10mil) Between Board Edge And Track (720.549mil,2899.052mil)(990.673mil,3008.19mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7877.271mil|Location2.X=7884.938mil|Location1.Y=3436.081mil|Location2.Y=3443.748mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7877.271mil|Location2.X=7884.938mil|Location1.Y=3436.081mil|Location2.Y=3443.748mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 10mil) Between Board Edge And Track (-95.854mil,975.601mil)(28.062mil,594.228mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7837.836mil|Location2.X=7845.502mil|Location1.Y=3634.557mil|Location2.Y=3642.223mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7837.836mil|Location2.X=7845.502mil|Location1.Y=3634.557mil|Location2.Y=3642.223mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 10mil) Between Board Edge And Track (-95.854mil,975.601mil)(391.087mil,1133.818mil) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8912.69mil|Location2.X=8920.356mil|Location1.Y=5634.034mil|Location2.Y=5641.701mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\github\esp-grow\hardware\ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8912.69mil|Location2.X=8920.356mil|Location1.Y=5634.034mil|Location2.Y=5641.701mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 10mil) Between Board Edge And Track (990.673mil,3008.19mil)(1123.408mil,2679.66mil) on Top Overlay </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
