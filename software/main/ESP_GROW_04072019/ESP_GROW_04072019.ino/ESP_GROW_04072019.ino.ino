@@ -3,6 +3,8 @@ By Kyle Rodrigues
 Date: 04/07/2019
 
 Board: Wemos D1 esp8266
+ESP8266 Arduino Git version: 2.4.0
+2.3.0 has issue connecting to wifi
 
 Make sure to add these:
    https://dl.espressif.com/dl/package_esp32_index.json,
@@ -38,7 +40,7 @@ Changes:
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 //*****DHT22 **********
-#define DHTPIN 2     // what digital pin the DHT22 is conected to
+#define DHTPIN D4     // what digital pin the DHT22 is conected to
 #define DHTTYPE DHT22   // there are multiple kinds of DHT sensors
 DHT dht(DHTPIN, DHTTYPE);
 
@@ -123,6 +125,7 @@ Serial.begin(115200);
 }
 
 void loop() {
+    delay(2000);
   soilval =  map(analogRead(0),320,760,100,0);
   h = dht.readHumidity();
   t = dht.readTemperature();

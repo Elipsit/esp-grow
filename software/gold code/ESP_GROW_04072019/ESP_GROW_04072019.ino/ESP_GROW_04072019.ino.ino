@@ -38,7 +38,7 @@ Changes:
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 //*****DHT22 **********
-#define DHTPIN 2     // what digital pin the DHT22 is conected to
+#define DHTPIN D4     // what digital pin the DHT22 is conected to
 #define DHTTYPE DHT22   // there are multiple kinds of DHT sensors
 DHT dht(DHTPIN, DHTTYPE);
 
