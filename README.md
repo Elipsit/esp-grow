@@ -6,5 +6,9 @@ This system is comprised of three main blocks:
 2) ESP-Grow_OLED_Rev_A: custom 2 layer pcb with a generic SSD1306 128x64 I2C monochrome OLED screen and a tack button seated under the screen.      Basically a screen button.
 3) ESP-Grow_OLED_Main_A: The motherboard. A custom 4 Layer pcb with all the connectors, power rails and leds.
 
-Current Progress: 5/4/2019
-Designing a revision A that will have all the connections made with Molex Micro-Fit connectons
+Update:
+-DHT22 library has an error with ESP8266 and ESP32, changing to DHT11 for project sensor
+
+Current Progress: 5/18/2019
+Main and OLED pcbs have been sent to fab.
+
