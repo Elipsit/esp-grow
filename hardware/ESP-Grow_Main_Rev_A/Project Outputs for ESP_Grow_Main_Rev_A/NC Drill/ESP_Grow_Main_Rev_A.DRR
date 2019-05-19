@@ -1,0 +1,23 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: ESP_Grow_Main_Rev_A.PcbDoc   5/18/2019  5:34:26 PM
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Copper to Bottom Copper
+ASCII RoundHoles File : ESP_Grow_Main_Rev_A.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      8mil (0.203mm)                                            Round             282       PTH        0.00inch (0.00mm)
+T2      12mil (0.305mm)                                           Round             10        PTH        0.00inch (0.00mm)
+T3      16mil (0.406mm)                                           Round             1         PTH        0.00inch (0.00mm)
+T4      40mil (1.016mm)                                           Round             16        PTH        0.00inch (0.00mm)
+T5      42mil (1.067mm)                                           Round             14        PTH        0.00inch (0.00mm)
+T6      60mil (1.524mm)                                           Round             3         PTH        0.00inch (0.00mm)
+T7      157mil (4mm)            +/-0mil (0mm)                     Round             4         PTH        0.00inch (0.00mm)
+T8      42mil (1.067mm)                                           Round             4         NPTH       0.00inch (0.00mm)
+T9      94mil (2.4mm)                                             Round             6         NPTH       0.00inch (0.00mm)
+T10     95mil (2.41mm)                                            Round             1         NPTH       0.00inch (0.00mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              341
+
+Total Processing Time (hh:mm:ss) : 00:00:00

@@ -1,0 +1,280 @@
+*************************************************************
+FileName = ESP_Grow_Main_Rev_A.PcbDoc
+ODB++ directory structure
+*************************************************************
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\matrix\matrix
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\profile
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\stephdr
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\attrlist
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\top_paste\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\top_paste\attrlist
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\top_overlay\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\top_overlay\attrlist
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\bottom_mask\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\bottom_mask\attrlist
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\bottom_paste\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\bottom_paste\attrlist
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\bottom_copper\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\bottom_copper\attrlist
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\keep-out_layer\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\keep-out_layer\attrlist
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\gnd\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\gnd\attrlist
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\top_mask\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\top_mask\attrlist
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\bottom_overlay\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\bottom_overlay\attrlist
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\power\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\power\attrlist
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\top_copper\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\top_copper\attrlist
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\drill\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\drill\attrlist
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\drill\tools
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\comp_+_top\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\comp_+_top\components
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\comp_+_bot\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\layers\comp_+_bot\components
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\steps\pcb\eda\data
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect62.9921x51.1811_240\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_315\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_218\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect25.5906x21.6535_150\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_240\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_135\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_125\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_115\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_105\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_95\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_85\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_75\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_65\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_55\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_45\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_45\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_35\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_25\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_15\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_5\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_355\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_345\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_335\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_325\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_252\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_20\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect62.9921x51.1811_240\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_315\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_218\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect25.5906x21.6535_150\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_240\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_135\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_125\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_115\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_105\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_95\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_85\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_75\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_65\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_55\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_45\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_45\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_35\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_25\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_15\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_5\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_355\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_345\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_335\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_325\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_252\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_20\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect70.9921x59.1811_240\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect59.1811x43.4331_315\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect47.3701x43.4331_218\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect33.5906x29.6535_150\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect47.3701x43.4331_240\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect47.3701x43.4331_135\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect47.3701x43.4331_125\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect47.3701x43.4331_115\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect47.3701x43.4331_105\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect47.3701x43.4331_95\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect47.3701x43.4331_85\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect47.3701x43.4331_75\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect47.3701x43.4331_65\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect47.3701x43.4331_55\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect47.3701x43.4331_45\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect59.1811x43.4331_45\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect59.1811x43.4331_35\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect59.1811x43.4331_25\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect59.1811x43.4331_15\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect59.1811x43.4331_5\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect59.1811x43.4331_355\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect59.1811x43.4331_345\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect59.1811x43.4331_335\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect59.1811x43.4331_325\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect47.3701x43.4331_252\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect47.3701x43.4331_20\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect62.9921x51.1811_240\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_315\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_218\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect25.5906x21.6535_150\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_240\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_135\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_125\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_115\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_105\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_95\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_85\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_75\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_65\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_55\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_45\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_45\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_35\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_25\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_15\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_5\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_355\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_345\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_335\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect51.1811x35.4331_325\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_252\features
+
+Generated File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_Main_Rev_A\Project Outputs for ESP_Grow_Main_Rev_A\ODB\odb\symbols\rect39.3701x35.4331_20\features
+

@@ -1,0 +1,6 @@
+[ProjectGroup]
+Version=1.0
+[Project1]
+ProjectPath=ESP-Grow_Main_Rev_A\ESP_Grow_Main_Rev_A.PrjPCB
+[Project2]
+ProjectPath=ESP-Grow_OLED_Rev_A\ESP-Grow_OLED_Rev_A.1.PrjPCB

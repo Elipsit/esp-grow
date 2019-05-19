@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
-PCB File : C:\github\esp-grow\hardware\ESP-Grow_OLED_Rev_A\ESP-Grow_OLED_Rev_A.1.PcbDoc
-Date     : 5/8/2019
-Time     : 9:07:59 PM
+PCB File : C:\Users\Kyle\Downloads\esp-grow-master\esp-grow-master\hardware\ESP-Grow_OLED_Rev_A\ESP-Grow_OLED_Rev_A.1.PcbDoc
+Date     : 5/18/2019
+Time     : 4:33:38 PM
 
 Processing Rule : Clearance Constraint (Gap=10mil) (All),(All)
 Rule Violations :0
@@ -48,4 +48,4 @@ Rule Violations :0
 
 Violations Detected : 0
 Waived Violations : 0
-Time Elapsed        : 00:00:01
+Time Elapsed        : 00:00:00

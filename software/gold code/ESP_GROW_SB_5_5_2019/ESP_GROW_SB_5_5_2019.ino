@@ -2,10 +2,15 @@
 By Kyle Rodrigues
 Date: 04/07/2019
 
-Board: Wemos D1 esp8266
+ESP Version: 2.5.0
+Board: Wemos D1 R1
+
+Library Versions:
+DHT Sensor Library: 1.3.4
+Adafruit Sensor: 
+Adafruit SSD1306:
 
 Make sure to add these:
-   https://dl.espressif.com/dl/package_esp32_index.json,
    http://arduino.esp8266.com/stable/package_esp8266com_index.json
    
    DHT22 - D4 pin 2
@@ -173,4 +178,3 @@ void loop() {
     delay(10000);
     digitalWrite(pump, LOW);
   }
-

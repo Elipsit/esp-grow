@@ -1,0 +1,30 @@
+Output: Gerber Files
+Type  : Gerber
+From  : PCB Document [ESP_Grow_Main_Rev_A.PcbDoc]
+   Generated File[ESP_Grow_Main_Rev_A.GTO]
+   Generated File[ESP_Grow_Main_Rev_A.GTP]
+   Generated File[ESP_Grow_Main_Rev_A.GTS]
+   Generated File[ESP_Grow_Main_Rev_A.GTL]
+   Generated File[ESP_Grow_Main_Rev_A.G1]
+   Generated File[ESP_Grow_Main_Rev_A.G2]
+   Generated File[ESP_Grow_Main_Rev_A.GBL]
+   Generated File[ESP_Grow_Main_Rev_A.GBS]
+   Generated File[ESP_Grow_Main_Rev_A.GBP]
+   Generated File[ESP_Grow_Main_Rev_A.GBO]
+   Generated File[ESP_Grow_Main_Rev_A.GM1]
+   Generated File[ESP_Grow_Main_Rev_A.GM8]
+   Generated File[ESP_Grow_Main_Rev_A.GM13]
+   Generated File[ESP_Grow_Main_Rev_A.GM15]
+   Generated File[ESP_Grow_Main_Rev_A.GPT]
+   Generated File[ESP_Grow_Main_Rev_A.GPB]
+   Generated File[ESP_Grow_Main_Rev_A.GD1]
+   Generated File[ESP_Grow_Main_Rev_A.GG1]
+   Generated File[ESP_Grow_Main_Rev_A.RUL]
+   Generated File[ESP_Grow_Main_Rev_A.EXTREP]
+   Generated File[ESP_Grow_Main_Rev_A.REP]
+
+
+Files Generated   : 21
+Documents Printed : 0
+
+Finished Output Generation At 5:34:29 PM On 5/18/2019
