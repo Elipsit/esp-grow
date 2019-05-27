@@ -1,8 +1,0 @@
-Removed Pin From Net: NetName=3.3V Pin=J1-1
-Removed Pin From Net: NetName=GND Pin=J1-2
-Change Component Library : Designator=J1 Old Library=Kyle_Lib_04-20-19.IntLib New Library=Kyle_Lib_04-20-19.SchLib
-Added Pin To Net: NetName=GND Pin=J1-1
-Added Pin To Net: NetName=3.3V Pin=J1-2
-PCB-ECO: Change Pad Pin/Pkg Length: Old=114.961mil New=0mil
-PCB-ECO: Change Pad Pin/Pkg Length: Old=114.961mil New=0mil
-PCB-ECO: Change Pad Pin/Pkg Length: Old=114.961mil New=200mil
