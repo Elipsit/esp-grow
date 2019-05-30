@@ -1,21 +1,27 @@
 /*ESP-Grow
 By Kyle Rodrigues
-Date: 04/07/2019
+Date: 5/29/2019
 
 Board: Wemos D1 esp8266
+ESP Lib: 2.5.0
+
 
 Make sure to add these:
    https://dl.espressif.com/dl/package_esp32_index.json,
    http://arduino.esp8266.com/stable/package_esp8266com_index.json
    
-   DHT22 - D4 pin 2
+   DHT11 Pin - D4 - GPIO2
 Screen - OLED Screen , Addr 0x3C, character uses 5x5 pixels, (X,Y)
 soil capacitive sensor A0
 
 Changes:
+4/20/2019
 -Soil Sens Error Added; no soil detected and no sensor detected
 -adding variable for button 
 -water pump added; set to water for 10 sec when soil is < 50% moisture
+
+5/29/2019
+-ESP8266 Arduino version >2.3 has issues with pin definitions, switched to using GPIO pins
 */
 
 //****Include Statements*****
@@ -38,7 +44,7 @@ Changes:
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 //*****DHT22 **********
-#define DHTPIN D4     // what digital pin the DHT22 is conected to
+#define DHTPIN 2     // what digital pin the DHT22 is conected to
 #define DHTTYPE DHT22   // there are multiple kinds of DHT sensors
 DHT dht(DHTPIN, DHTTYPE);
 

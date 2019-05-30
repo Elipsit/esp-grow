@@ -1,6 +1,6 @@
 /*ESP-Grow
 By Kyle Rodrigues
-Date: 04/07/2019
+Date: 5/5/2019
 
 ESP Version: 2.5.0
 Board: Wemos D1 R1
@@ -9,6 +9,8 @@ Library Versions:
 DHT Sensor Library: 1.3.4
 Adafruit Sensor: 
 Adafruit SSD1306:
+
+Note: Use the GPIO# pins for mapping.
 
 Make sure to add these:
    http://arduino.esp8266.com/stable/package_esp8266com_index.json
@@ -52,7 +54,8 @@ int  soilval;
 
 float t,h;
 const int pump = 16; // water pump
-const int btn = 15; //push button
+const int btn = 12; //push button for pump
+const int oled_btn = 0; //OLED Screen button
 
 // Replace with your network credentials
 const char* ssid = "Pretty Fly For A Wifi-2.4";
@@ -64,7 +67,7 @@ String page = "";
 double data; 
 
 void setup(void) {
-Serial.begin(115200);
+Serial.begin(19200); //changed from 115200
  pinMode(pump, OUTPUT);
  pinMode(btn, INPUT);
 
@@ -73,7 +76,7 @@ Serial.begin(115200);
  
     //******OLED Start*****
    // SSD1306_SWITCHCAPVCC = generate display voltage from 3.3V internally
-  if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) { // Address 0x3D for 128x64
+  if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) { 
     Serial.println(F("SSD1306 allocation failed"));
     for(;;); // Don't proceed, loop forever
   }
