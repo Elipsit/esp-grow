@@ -1,0 +1,353 @@
+*************************************************************
+FileName = ESP-Grow_OLED_Rev_A.1.GBR
+AutoAperture = True
+*************************************************************
+Generating : Drill Drawing
+      File : ESP-Grow_OLED_Rev_A.1.GD1
+
+    Adding Layer      : Mechanical 1
+
+    Adding Layer      : Mechanical 13
+
+    Adding Drill Pair : Top Layer-Bottom Layer
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D16
+    D17
+    D42
+    D43
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : ESP-Grow_OLED_Rev_A.1.GG1
+
+    Adding Layer      : Mechanical 1
+
+    Adding Layer      : Mechanical 13
+
+    Adding Drill Pair : Top Layer-Bottom Layer
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+    D16
+    D17
+    D42
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : ESP-Grow_OLED_Rev_A.1.GTO
+
+    Adding Layer      : Top Overlay
+
+    Adding Layer      : Mechanical 1
+
+    Adding Layer      : Mechanical 13
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+    D16
+    D17
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : ESP-Grow_OLED_Rev_A.1.GBO
+
+    Adding Layer      : Bottom Overlay
+
+    Adding Layer      : Mechanical 1
+
+    Adding Layer      : Mechanical 13
+
+
+Used DCodes :
+    D12
+    D14
+    D15
+    D16
+    D17
+*************************************************************
+
+*************************************************************
+Generating : Top Paste
+      File : ESP-Grow_OLED_Rev_A.1.GTP
+
+    Adding Layer      : Top Paste
+
+    Adding Layer      : Mechanical 1
+
+    Adding Layer      : Mechanical 13
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+*************************************************************
+
+*************************************************************
+Generating : Bottom Solder
+      File : ESP-Grow_OLED_Rev_A.1.GBS
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Mechanical 1
+
+    Adding Layer      : Mechanical 13
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D16
+    D17
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 15
+      File : ESP-Grow_OLED_Rev_A.1.GM15
+
+    Adding Layer      : Mechanical 15
+
+    Adding Layer      : Mechanical 1
+
+    Adding Layer      : Mechanical 13
+
+
+Used DCodes :
+    D16
+    D17
+    D41
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 1
+      File : ESP-Grow_OLED_Rev_A.1.GM1
+
+    Adding Layer      : Mechanical 1
+
+    Adding Layer      : Mechanical 1
+
+    Adding Layer      : Mechanical 13
+
+
+Used DCodes :
+    D16
+    D17
+*************************************************************
+
+*************************************************************
+Generating : Keep-Out Layer
+      File : ESP-Grow_OLED_Rev_A.1.GKO
+
+    Adding Layer      : Keep-Out Layer
+
+    Adding Layer      : Mechanical 1
+
+    Adding Layer      : Mechanical 13
+
+
+Used DCodes :
+    D16
+    D17
+*************************************************************
+
+*************************************************************
+Generating : Top Layer
+      File : ESP-Grow_OLED_Rev_A.1.GTL
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Mechanical 1
+
+    Adding Layer      : Mechanical 13
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D11
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D30
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+*************************************************************
+
+*************************************************************
+Generating : Top Solder
+      File : ESP-Grow_OLED_Rev_A.1.GTS
+
+    Adding Layer      : Top Solder
+
+    Adding Layer      : Mechanical 1
+
+    Adding Layer      : Mechanical 13
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D16
+    D17
+    D22
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 13
+      File : ESP-Grow_OLED_Rev_A.1.GM13
+
+    Adding Layer      : Mechanical 13
+
+    Adding Layer      : Mechanical 1
+
+    Adding Layer      : Mechanical 13
+
+
+Used DCodes :
+    D16
+    D17
+*************************************************************
+
+*************************************************************
+Generating : Top Pad Master
+      File : ESP-Grow_OLED_Rev_A.1.GPT
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+    Adding Layer      : Mechanical 1
+
+    Adding Layer      : Mechanical 13
+
+
+Used DCodes :
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D35
+    D36
+    D37
+    D38
+*************************************************************
+
+*************************************************************
+Generating : Bottom Pad Master
+      File : ESP-Grow_OLED_Rev_A.1.GPB
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+    Adding Layer      : Mechanical 1
+
+    Adding Layer      : Mechanical 13
+
+
+Used DCodes :
+    D16
+    D17
+    D35
+    D36
+    D37
+    D38
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 8
+      File : ESP-Grow_OLED_Rev_A.1.GM8
+
+    Adding Layer      : Mechanical 8
+
+    Adding Layer      : Mechanical 1
+
+    Adding Layer      : Mechanical 13
+
+
+Used DCodes :
+    D16
+    D17
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : ESP-Grow_OLED_Rev_A.1.GBL
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Mechanical 1
+
+    Adding Layer      : Mechanical 13
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D16
+    D17
+    D30
+    D33
+    D34
+    D35
+    D36
+    D37
+    D38
+    D39
+    D40
+*************************************************************
+
