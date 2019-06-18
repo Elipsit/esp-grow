@@ -81,13 +81,6 @@ const char* password = "supercarbon";
 
 WiFiServer server(80);
 
-void handleRoot() {
-  char temp[400];
-  int sec = millis() / 1000;
-  int min = sec / 60;
-  int hr = min / 60;
-}
-
 void setup(){
   Serial.begin(115200);
   Serial.println();
@@ -268,6 +261,7 @@ void waterpump(){
     digitalWrite(pump, LOW);
   }
 
+//this part does the uptime
  void uptime(){
 //** Making Note of an expected rollover *****//   
 if(millis()>=3000000000){ 
