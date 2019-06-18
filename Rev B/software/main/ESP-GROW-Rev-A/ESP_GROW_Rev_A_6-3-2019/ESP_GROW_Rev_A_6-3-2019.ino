@@ -59,7 +59,7 @@ int  soilana,soilval;
 float t,h;
 const int pump = 16; // water pump
 const int btn = 12; //push button for pump
-const int oled_btn = 0; //OLED Screen button
+const int oled_btn = 12; //OLED Screen button
 char* product = "Blueberry Dream";
 static char celsiusTemp[7];
 static char fahrenheitTemp[7];
