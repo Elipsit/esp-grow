@@ -1,7 +1,7 @@
 /* ___________________________________
  |   ESP-Grow Rev A                   |
  |   By Kyle Rodrigues                |
- |   Date: 6/3/2019                   |
+ |   Date: 6/18/2019                   |
   ___________________________________
 
 ***Library Versions:***
@@ -34,7 +34,11 @@ Screen Button - GPIO0
 *changed water timer delay to 5 sec
 *added a short delay to use when pump button pressed
 *added an uptime counter
+*6/18.2019
+*changed font and background color
 *
+****Status***
+*works but need to add content length to fix loading issue
  */
 //****Include Statements*****
 //OLED Screen
@@ -73,7 +77,7 @@ int Second=0;
 int HighMillis=0;
 int Rollover=0;
 
-char* product = "Strawberry Banana";
+char* product = "Test Code";
 char* revision = "Code Version: 6/17/2019";
 
 const char* ssid = "Pretty Fly For A Wifi-2.4";
@@ -149,15 +153,16 @@ String prepareHtmlPage()
      String("HTTP/1.1 200 OK\r\n") +
             "Content-Type: text/html\r\n" +
             "Connection: close\r\n" +  // the connection will be closed after completion of the response
-            "Refresh: 5\r\n" +  // refresh the page automatically every 5 sec
+            //"Refresh: 5\r\n" +  // refresh the page automatically every 5 sec
+            "Refresh: 25\r\n" +  // refresh the page automatically every 25 sec
             "\r\n" +
             "<title>ESP-Grow Rev A</title>"
             "<!DOCTYPE HTML>" +
             "<style>"+
-            "body{ background-color: #cccccc; font-family: Arial, Helvetica, Sans-Serif; Color: #000088; }"
+            "body{ background-color: #1f2833; font-family: Comfortaa, Helvetica, Sans-Serif; Color: #66fcf1; }"
             "</style>"
             "<h1>ESP-GROW Web Server</h1>"+
-            "<h2>"+"By: Kyle Rodrigues | "+String(revision)+"</h2>"
+            "<h2>"+"By: Kyle R. Designs | "+String(revision)+"</h2>"
             "<html>" +
             "Soil Moisture Content(%):  " + String(soilval)+"<br>"+
             "Air Temperature(%):  " + String(t)+"<br>"+
