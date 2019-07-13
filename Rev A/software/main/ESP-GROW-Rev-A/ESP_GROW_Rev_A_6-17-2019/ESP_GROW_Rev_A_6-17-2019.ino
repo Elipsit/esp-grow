@@ -158,9 +158,11 @@ String prepareHtmlPage()
             "\r\n" +
             "<title>ESP-Grow Rev A</title>"
             "<!DOCTYPE HTML>" +
-            "<style>"+
-            "body{ background-color: #1f2833; font-family: Comfortaa, Helvetica, Sans-Serif; Color: #66fcf1; }"
-            "</style>"
+    "<style>" +
+    "body {background-color:#1f2833;background-repeat:no-repeat;background-position:top left;background-attachment:fixed;}" +
+    "h1{font-family:Comfortaa, serif, Sans-Serif; Color: #66fcf1; background-color:#1f2833;}" +
+    "p {font-family:Comfortaa, serif;font-size:14px;font-style:normal;font-weight:normal;color:#1f2833;background-color:#1f2833;}" +
+    "</style>" +
             "<h1>ESP-GROW Web Server</h1>"+
             "<h2>"+"By: Kyle R. Designs | "+String(revision)+"</h2>"
             "<html>" +
