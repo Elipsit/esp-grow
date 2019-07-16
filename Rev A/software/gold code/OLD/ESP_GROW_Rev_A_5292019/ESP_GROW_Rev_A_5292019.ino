@@ -167,7 +167,7 @@ void loop() {
   display.display();
   delay(100);
   display.display();
-  if(soilval<40){
+  if(soilval<60){
     waterpump();
   }
   server.handleClient();
@@ -178,3 +178,4 @@ void loop() {
     delay(10000);
     digitalWrite(pump, LOW);
   }
+

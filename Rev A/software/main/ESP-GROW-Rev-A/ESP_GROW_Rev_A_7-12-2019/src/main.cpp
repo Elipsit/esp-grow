@@ -1,7 +1,7 @@
 /* ___________________________________
  |   ESP-Grow Rev A                   |
  |   By Kyle Rodrigues                |
- |   Date: 6/18/2019                   |
+ |   Date: 7/12/2019                   |
   ___________________________________
 
 ***Library Versions:***
@@ -42,7 +42,8 @@ Screen Button - GPIO0
 *used a html generator to regnerate webpage
 *
 ****Status***
-*works but doesnt load on mobile. 
+*I messed with the dht code a bit
+
  */
 //****Include Statements*****
 //OLED Screen
@@ -63,8 +64,10 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 //*****DHT22 **********
 #define DHTPIN 2     // what digital pin the DHT22 is conected to
-#define DHTTYPE DHT22   // there are multiple kinds of DHT sensors
+#define DHTTYPE DHT11   // there are multiple kinds of DHT sensors
 DHT dht(DHTPIN, DHTTYPE);
+int DHT_delay_value = 2;
+int DHT_Delay = DHT_delay_value;
 
 int  soilval, pumpcyc;
 
@@ -97,11 +100,21 @@ void waterpump(){
 
   void shortwaterpump(){
     digitalWrite(pump, HIGH);
-    delay(2000);
+    delay(4000);
     digitalWrite(pump, LOW);
     pumpcyc++;
   }
-  
+
+ void checkDHT(){
+   if (DHT_Delay>=1)
+   {
+     DHT_Delay = DHT_Delay - 1;
+   }else{
+     DHT_Delay = DHT_delay_value;
+     h = dht.readHumidity();
+     t = dht.readTemperature();
+   }
+ }  
 // prepare a web page to be send to a client (web browser)
 String prepareHtmlPage()
 {
@@ -144,8 +157,7 @@ String prepareHtmlPage()
 
 void checksensor(){
 soilval =  map(analogRead(0),320,760,100,0);
-  h = dht.readHumidity();
-  t = dht.readTemperature();
+checkDHT(); //check the dht status
   display.clearDisplay();
   display.setCursor(10, 0); // Set cursor to top-left
   display.println(product);
@@ -171,18 +183,18 @@ soilval =  map(analogRead(0),320,760,100,0);
   display.setCursor(0, 40);
   display.println("DHT22:");
   display.setCursor(35, 40);
-  display.println(dht.readTemperature());
+  display.println(t,1);
   display.setCursor(70, 40);
   display.println("oC");
   display.setCursor(35, 50);
-  display.println(dht.readHumidity());
+  display.println(h,2);
   display.setCursor(70, 50);
   display.println("%");  
   display.display();
   delay(100);
   display.display();
   
-  if((soilval<40)&(soilval>5)){
+  if((soilval<50)&(soilval>5)){
     waterpump();
   }
 }

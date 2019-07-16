@@ -1,1 +1,0 @@
-All pcb design was done in Altium Designer 17 and Nexus

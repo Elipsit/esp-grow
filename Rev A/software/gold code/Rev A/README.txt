@@ -1,0 +1,1 @@
+All projects after 7/12/2019 use platformIO
