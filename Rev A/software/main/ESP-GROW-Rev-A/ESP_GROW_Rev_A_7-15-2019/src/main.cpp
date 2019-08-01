@@ -80,7 +80,7 @@ int HighMillis=0;
 int Rollover=0;
 
 char* product = "Strawberry Bananna";
-char* revision = "6/20/2019";
+char* revision = "7/15/2019";
 
 const char* ssid = "Pretty Fly For A Wifi-2.4";
 const char* password = "supercarbon";
