@@ -1,12 +1,7 @@
 {
 	"folders": [
 		{
-			"name": "esp-grow_8-1-2019",
-			"path": "esp-grow_Rev_A_8-1-2019\\esp-grow_8-1-2019"
-		},
-		{
-			"name": "ESP32_AWS_Test",
-			"path": "C:\\Users\\livin\\Documents\\PlatformIO\\Projects\\ESP32_AWS_Test"
+			"path": "ESP_GROW_Rev_A_9-8-2019"
 		}
 	],
 	"settings": {
