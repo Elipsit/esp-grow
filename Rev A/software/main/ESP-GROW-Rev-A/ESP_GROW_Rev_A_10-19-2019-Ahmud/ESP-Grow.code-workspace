@@ -1,10 +1,11 @@
 {
 	"folders": [
 		{
-			"path": "ESP_GROW_Rev_A_9-8-2019"
+			"path": "C:\\github\\esp32-grow\\Rev A\\Code\\ADS7961\\ADS7961_9-30-2019"
 		},
 		{
-			"path": "ESP_GROW_Rev_A_10-19-2019-Ahmud"
+			"name": "ADS7961_9-28-2019",
+			"path": "C:\\github\\esp32-grow\\Rev A\\Code\\ADS7961\\ADS7961_9-28-2019"
 		}
 	],
 	"settings": {
