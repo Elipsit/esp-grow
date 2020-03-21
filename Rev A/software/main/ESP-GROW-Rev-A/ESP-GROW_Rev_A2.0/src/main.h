@@ -1,8 +1,8 @@
 #ifndef MAIN_H
 
-char* product = "Cookies";
+const char* product = "Cookies";
 //char* product = "Fire OG";
-char* revision = "11/28/2019";
+const char* revision = "3/21/2020";
 
 //setpoint for waterpump to turn on
 int soilsetpoint = 20;

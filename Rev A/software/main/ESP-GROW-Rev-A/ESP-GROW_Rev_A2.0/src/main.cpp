@@ -1,7 +1,7 @@
 /* ___________________________________
  |   ESP-Grow Rev A                   |
  |   By Kyle Rodrigues                |
- |   Date: 8/04/2019                   |
+ |   Date: 3/20/2020                  |
   ___________________________________
 ***Library Versions:***
 See platform.ini
@@ -19,11 +19,8 @@ Water Pump - GPIO16
 Pump Button - GPIO12
 Screen Button - GPIO0
 *
-*9/8/2019
-*soil sensor setpoint changed to int on main.h
-*new usb type soil sensors used in this test
-*water short chaged to 5sec long changed to 10sec
-*debug mode removes soil sensor error
+*3/21/2020
+*
 ****Status***
 *works but doesn't load well on mobile. 
  */
@@ -36,6 +33,8 @@ Screen Button - GPIO0
 #include <Wire.h>  // Include Wire if you're using I2C
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
+
+
 //DHT22
 #include "DHTesp.h"
 //ESP8266
@@ -46,11 +45,16 @@ Screen Button - GPIO0
 //*****OLED 0.96" **********
 #define SCREEN_WIDTH 128 // OLED display width, in pixels
 #define SCREEN_HEIGHT 64 // OLED display height, in pixels
-#define OLED_RESET     1 // // Wemo SCL 
+//#define OLED_RESET     4 // Reset pin # (or -1 if sharing Arduino reset pin)
+#define OLED_RESET     -1 // // Wemo SCL 
+//#define OLED_RESET     1 // // Wemo SCL 
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
+
+
 //EEPROM
-#define EEPROM_SIZE 512
+#define EEPROM_SIZE 2048
+
 int WetSensCal, DrySensCal;
 const unsigned int soil_addr_wet  = 100;
 const unsigned int soil_addr_dry  = 110;
@@ -68,8 +72,6 @@ int soilval_raw;
 int AutoPumpMaxCount=0;
 
 
-
-
 DHTesp dht;
 
 //***Uptime deff***
@@ -83,6 +85,7 @@ int Rollover=0;
 
 //****Function Definitions***********
 int connect_Wifi();
+void ScreenSetup();
 void waterpump();
 void shortwaterpump();
 void checksensor();
@@ -129,26 +132,35 @@ void shortwaterpump(){
   
 void setup(){
   Serial.begin(115200);
+    //Serial.begin(74880);
+  delay(1000);
+  
   Serial.println("Serial Started");
 
   //Start EEPROM
   EEPROM.begin(EEPROM_SIZE);
+  Serial.println("EEPROM Done");
+  delay(1000);
   //Revision
   Serial.println(revision);
-  String thisBoard= ARDUINO_BOARD;
-  Serial.println(thisBoard);
+  //String thisBoard= ARDUINO_BOARD;
+  //Serial.println(thisBoard);
 
  //GPIO
   pinMode(pump, OUTPUT);
   pinMode(btn, INPUT);
   pinMode(scrbtn, INPUT);
+  Serial.println("GPIO Started");
 
+  
   //******OLED Start*****
    // SSD1306_SWITCHCAPVCC = generate display voltage from 3.3V internally
   if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) { // Address 0x3D for 128x64
-    Serial.println(F("SSD1306 allocation failed"));
-    for(;;); // Don't proceed, loop forever
+   Serial.println(F("SSD1306 allocation failed"));
+    //for(;;); // Don't proceed, loop forever
   }
+  
+  Serial.println("Screen Started");
   display.display();
   delay(100); // Pause for 2 seconds
   // Clear the buffer
@@ -161,12 +173,17 @@ void setup(){
   display.println(product);
   display.display();       // Refresh the display
   delay(100);          // Delay a second and repeat
-
+  
   //DHT Startup
   //dht.setup(2, DHTesp::DHT11); // Connect DHT11 sensor to GPIO 2
   dht.setup(2, DHTesp::DHT22); // Connect DHT22 sensor to GPIO 2
+  Serial.println("DHT Started");
 
-  Serial.printf("Connecting to %s ", ssid);
+  //Serial.printf("Connecting to %s ", ssid);
+
+  Serial.print("Connecting to: ");
+  Serial.println(ssid);
+
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED)
      {
@@ -288,6 +305,27 @@ void wifiStatus(){
   
 }
 
+void ScreenSetup(){
+  //******OLED Start*****
+   // SSD1306_SWITCHCAPVCC = generate display voltage from 3.3V internally
+  if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) { // Address 0x3D for 128x64
+    Serial.println(F("SSD1306 allocation failed"));
+   // for(;;); // Don't proceed, loop forever
+  }
+    display.display();
+   // delay(2000); // Pause for 2 seconds
+    delay(2000);    // Clear the buffer
+    display.clearDisplay();
+    display.setTextSize(1);             // Normal 1:1 pixel scale
+    display.setTextColor(WHITE);        // Draw white text
+    display.setCursor(20, 0); // Set cursor to top-left
+    display.cp437(true);         // Use full 256 char 'Code Page 437' font
+    // Print can be used to print a string to the screen:
+    display.println("Super Carbon");
+    display.display();       // Refresh the display
+    delay(100);  
+}
+
 void debug (){
   while (1)
   {
@@ -360,7 +398,7 @@ void checksensor(){
   display.setCursor(80, 30);
   display.println(soilval_raw); 
    }
-  //DHT22 Temperature and Humidity
+  //Update Screen with DHT22 Temperature and Humidity
   display.setCursor(0, 40);
   display.println("DHT22:");
   display.setCursor(35, 40);
