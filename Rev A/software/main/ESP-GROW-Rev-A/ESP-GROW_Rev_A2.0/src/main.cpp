@@ -265,7 +265,7 @@ void loop(){
     RunWifiClient();  
     }
   Serial.printf("\nPump Threshold: %d %% \t Soil Moisture: %d %% \tPump Daily Cycle: %d", pump_threhold,soilval,AutoPumpMaxCount);
-  Serial.printf("\nDHT: %f oC \t%f RH", t,h);
+  Serial.printf("\nDHT: %4.2f oC \t%4.2f %%RH", t,h);
   Serial.printf("\nUptime: %d:%d:%d:%d", Day,Hour,Minute,Second);
   Serial.println(" ");
   delay(1000);
