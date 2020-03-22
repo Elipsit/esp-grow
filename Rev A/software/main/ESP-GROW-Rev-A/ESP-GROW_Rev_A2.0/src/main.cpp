@@ -61,6 +61,9 @@ const unsigned int soil_addr_dry  = 110;
 int cal_wet_buf[10];
 int cal_dry_buf[10];
 long unsigned int cal_dry_raw, cal_wet_raw;
+int pump_threhold;
+const unsigned int pump_threshold_addr = 120;
+
 
 int  soilval, pumpcyc;
 
@@ -96,15 +99,16 @@ String prepareHtmlPage();
 void RunWifiClient();
 void readSerial();
 void SensorCal();
+void PumpThreshold();
 
  //Bitmaps
-  void WIFI_bitmap();
-  void pHCal_bitmap();
-  void loading_bitmap();
-  void temp_bitmap();
-  void pressure_bitmap();
-  void ADC_bitmap();
-  void time_bitmap();
+void WIFI_bitmap();
+ void pHCal_bitmap();
+ void loading_bitmap();
+ void temp_bitmap();
+ void pressure_bitmap();
+ void ADC_bitmap();
+ void time_bitmap();
 
 WiFiServer server(80);
 
@@ -132,8 +136,10 @@ void shortwaterpump(){
   
 void setup(){
   Serial.begin(115200);
-    //Serial.begin(74880);
-  delay(1000);
+    while (!Serial) {
+    ; // wait for serial port to connect. Needed for native USB port only
+  }
+  delay(100);
   
   Serial.println("Serial Started");
 
@@ -141,10 +147,11 @@ void setup(){
   EEPROM.begin(EEPROM_SIZE);
   Serial.println("EEPROM Done");
   delay(1000);
+
   //Revision
   Serial.println(revision);
-  //String thisBoard= ARDUINO_BOARD;
-  //Serial.println(thisBoard);
+  String thisBoard= ARDUINO_BOARD;
+  Serial.println(thisBoard);
 
  //GPIO
   pinMode(pump, OUTPUT);
@@ -232,11 +239,14 @@ void setup(){
 
   EEPROM.get(soil_addr_dry,DrySensCal);
   EEPROM.get(soil_addr_wet,WetSensCal);
+  EEPROM.get(pump_threshold_addr,pump_threhold);
   Serial.println("Current Calibration Data: ");
   Serial.print("Dry: ");
   Serial.print(DrySensCal);
-  Serial.print("/tWet: ");
+  Serial.print("\tWet: ");
   Serial.print(WetSensCal);
+    Serial.print("\tPump Threshold: ");
+  Serial.print(pump_threhold);
   Serial.println(" ");
   readSerial();
   }
@@ -254,6 +264,11 @@ void loop(){
     uptime();
     RunWifiClient();  
     }
+  Serial.printf("\nPump Threshold: %d %% \t Soil Moisture: %d %% \tPump Daily Cycle: %d", pump_threhold,soilval,AutoPumpMaxCount);
+  Serial.printf("\nDHT: %f oC \t%f RH", t,h);
+  Serial.printf("\nUptime: %d:%d:%d:%d", Day,Hour,Minute,Second);
+  Serial.println(" ");
+  delay(1000);
   }
 
 
@@ -557,13 +572,13 @@ String prepareHtmlPage(){
 void readSerial(){
 
     unsigned const int timerStart = millis();
-    unsigned const int timerMaxDuration = 5000;
+    unsigned const int timerMaxDuration = 20000;
 
     int incomingByte = 0;
     bool breakFlag = false;
-
+    loading_bitmap(); //add a laoding splash on the screen
     Serial.println("---Soil Sensor Calibration Routine---");
-    Serial.println("Y - Enter Routine \t N - Continue to main program");
+    Serial.println("1 - Enter Sensor Calibration Routine \t 2 - Pump Threshold \t N - Continue to main program");
 
   do{
 
@@ -577,9 +592,14 @@ void readSerial(){
       incomingByte = Serial.read();
   
       switch (incomingByte){
-        case 121: //121 == y
+        case 49:  //49 == 1
         Serial.println("Entered Calibration Routine");
         SensorCal();
+        break;
+
+        case 50:  //50 == 2
+        Serial.println("Entered Pump Threshold Routine");
+        PumpThreshold();
         break;
       
         case 110: //110 = n
@@ -604,6 +624,7 @@ void SensorCal(){
   int incomingByte = 0;
   bool breakFlag = false;
   cal_dry_raw = 0;
+  delay(500);
 
   //---Dry Soil Calibration Routine
   Serial.println("--- Dry Sensor Calibration Routine ---");
@@ -627,7 +648,7 @@ void SensorCal(){
         Serial.println(DrySensCal);
         Serial.print(" ");
         
-        EEPROM.put(DrySensCal, soil_addr_dry);
+        EEPROM.put(soil_addr_dry,DrySensCal);
         EEPROM.commit();
         Serial.println("Dry Sensor Value Calibrated");
         breakFlag = true;
@@ -668,7 +689,7 @@ void SensorCal(){
         Serial.println(WetSensCal);
         Serial.print(" ");
 
-        EEPROM.put(WetSensCal, soil_addr_wet);
+        EEPROM.put(soil_addr_wet,WetSensCal);
         EEPROM.commit();
 
       Serial.println("Wet Sensor Value Calibrated");
@@ -685,6 +706,95 @@ void SensorCal(){
       break;
     }
   }
+  }while(breakFlag == false);
+
+}
+
+void PumpThreshold(){
+ Serial.println("---Pump Threshold Routine---");
+  Serial.println("Select number with the corresponding soil mositure threshold");
+  Serial.println("1 = 10% | 2 = 15% | 3 = 20% | 4 = 25% | 5 = 30% | 6 = 35% | 7 = 40% | 8 = 45% ");
+  int incomingByte = 0;
+  bool breakFlag = false;
+  delay(500);
+  do{
+  if (Serial.available() > 0) {
+      // read the incoming byte:
+      incomingByte = Serial.read();
+  
+      switch (incomingByte){
+          case 49:  //49 == 1
+        Serial.println("Waterpump threshold =  10%");
+        pump_threhold = 10;
+        EEPROM.put(pump_threshold_addr,pump_threhold);
+        EEPROM.commit();
+        breakFlag = true;
+        break;
+
+        case 50:  //50 == 2
+        Serial.println("Waterpump threshold =  15%");
+        pump_threhold = 15;
+        EEPROM.put(pump_threshold_addr,pump_threhold);
+        EEPROM.commit();
+        breakFlag = true;
+        break;
+
+        case 51:  //51 == 3
+        Serial.println("Waterpump threshold =  20%");
+        pump_threhold = 20;
+        EEPROM.put(pump_threshold_addr,pump_threhold);
+        EEPROM.commit();
+        breakFlag = true;
+        break;
+
+        case 52:  //52 == 4
+        Serial.println("Waterpump threshold =  25%");
+        pump_threhold = 25;
+        EEPROM.put(pump_threshold_addr,pump_threhold);
+        EEPROM.commit();
+        breakFlag = true;
+        break;
+
+        case 53:  //53 == 5
+        Serial.println("Waterpump threshold =  30%");
+        pump_threhold = 30;
+        EEPROM.put(pump_threshold_addr,pump_threhold);
+        EEPROM.commit();
+        breakFlag = true;
+        break;
+
+        case 54:  //54 == 6
+        Serial.println("Waterpump threshold =  35%");
+        pump_threhold = 35;
+        EEPROM.put(pump_threshold_addr,pump_threhold);
+        EEPROM.commit();
+        breakFlag = true;
+        break;
+
+        case 55:  //55 == 7
+        Serial.println("Waterpump threshold =  40%");
+        pump_threhold = 40;
+        EEPROM.put(pump_threshold_addr,pump_threhold);
+        EEPROM.commit();
+        breakFlag = true;
+        break;
+
+        case 56:  //56 == 8
+        Serial.println("Waterpump threshold =  45%");
+        pump_threhold = 45;
+        EEPROM.put(pump_threshold_addr,pump_threhold);
+        EEPROM.commit();
+        breakFlag = true;
+        break;
+        
+        default:
+        Serial.println("Invalid input");
+        Serial.println("Continue to main program");
+        breakFlag = true;
+        break;
+      }
+
+    }
   }while(breakFlag == false);
 
 }

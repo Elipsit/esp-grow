@@ -12,8 +12,8 @@ int soilsetpoint = 20;
 //int sensmap_wet = 690;
 
 //Cookies Soil Sensor mapping scale measured when soil wet
-int sensmap_dry = 930;
-int sensmap_wet = 730;
+//int sensmap_dry = 930;
+//int sensmap_wet = 730;
 
 // Wifi Details
 const char* ssid = "Pretty Fly For A Wifi-2.4";
