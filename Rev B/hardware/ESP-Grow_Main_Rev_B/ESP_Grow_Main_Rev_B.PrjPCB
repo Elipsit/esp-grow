@@ -89,7 +89,7 @@ GenerateClassCluster=0
 DocumentUniqueId=NDUVWXUJ
 
 [Document4]
-DocumentPath=ESP_Grow_Main_Rev_B_1_Con.SchDoc
+DocumentPath=ESP_Grow_Main_Rev_B_2_Con.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -106,7 +106,24 @@ GenerateClassCluster=0
 DocumentUniqueId=SVEUXPEL
 
 [Document5]
-DocumentPath=ESP_Grow_Main_Rev_B_2_3V_5V.SchDoc
+DocumentPath=ESP_Grow_Main_Rev_B_3.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=GDNFUTRK
+
+[Document6]
+DocumentPath=ESP_Grow_Main_Rev_B_4_3V_5V.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -122,8 +139,8 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=GCFSMULS
 
-[Document6]
-DocumentPath=ESP_Grow_Main_Rev_B_3_ChangeLog.SchDoc
+[Document7]
+DocumentPath=ESP_Grow_Main_Rev_B_5_ChangeLog.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -139,7 +156,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=RCOAVYRE
 
-[Document7]
+[Document8]
 DocumentPath=ESP_Grow_Main_Rev_B.BomDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -156,7 +173,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document8]
+[Document9]
 DocumentPath=ESP_Grow_Main_Rev_B.OutJob
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -173,7 +190,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document9]
+[Document10]
 DocumentPath=ESP_Grow_Main_Rev_B.PCBDwf
 AnnotationEnabled=1
 AnnotateStartValue=1
