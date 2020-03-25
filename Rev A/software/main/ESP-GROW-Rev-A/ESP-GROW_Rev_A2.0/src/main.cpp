@@ -100,6 +100,7 @@ void RunWifiClient();
 void readSerial();
 void SensorCal();
 void PumpThreshold();
+void ScreenUpdate();
 
  //Bitmaps
 void WIFI_bitmap();
@@ -262,13 +263,14 @@ void loop(){
     wifiStatus();
   }else{
     uptime();
-    RunWifiClient();  
+    RunWifiClient();
+    ScreenUpdate();
+    Serial.printf("\nPump Threshold: %d %% \t Soil Moisture: %d %% \tPump Daily Cycle: %d", pump_threhold,soilval,AutoPumpMaxCount);
+    Serial.printf("\nDHT: %4.2f oC \t%4.2f %%RH", t,h);
+    Serial.printf("\nUptime: %d:%d:%d:%d", Day,Hour,Minute,Second);
+    Serial.println(" ");
+    delay(1000);  
     }
-  Serial.printf("\nPump Threshold: %d %% \t Soil Moisture: %d %% \tPump Daily Cycle: %d", pump_threhold,soilval,AutoPumpMaxCount);
-  Serial.printf("\nDHT: %4.2f oC \t%4.2f %%RH", t,h);
-  Serial.printf("\nUptime: %d:%d:%d:%d", Day,Hour,Minute,Second);
-  Serial.println(" ");
-  delay(1000);
   }
 
 
@@ -376,7 +378,7 @@ void debug (){
   delay(100);
   display.display();
   
-  if((soilval<soilsetpoint)&(soilval>5)){
+  if((soilval<pump_threhold)&(soilval>5)){
     waterpump();
   }
    delay(1000);
@@ -389,13 +391,23 @@ void checksensor(){
   delay(dht.getMinimumSamplingPeriod());
    h = dht.getHumidity();
    t = dht.getTemperature();
+  
+  if((soilval<pump_threhold)&(soilval>5)){
+    waterpump();
+  }
+}
 
+void ScreenUpdate(){
   display.clearDisplay();
   display.setCursor(30, 0); // Set cursor to top-left
   display.println(product);
+  //Display the IPAddress
   display.setCursor(10, 20);
   display.println(WiFi.localIP());
-  
+  //Displays the RSSI Value
+  display.setCursor(90, 20);
+  display.print(WiFi.RSSI());
+
    //Soil Capacitance Sensor
   display.setCursor(0, 30);
    if(soilval < 5){ 
@@ -427,12 +439,7 @@ void checksensor(){
   display.display();
   delay(100);
   display.display();
-  
-  if((soilval<soilsetpoint)&(soilval>5)){
-    waterpump();
-  }
 }
-
 //this part does the uptime
 void uptime(){
   //** Making Note of an expected rollover *****//   

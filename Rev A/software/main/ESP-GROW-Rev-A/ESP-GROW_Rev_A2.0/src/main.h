@@ -1,19 +1,14 @@
 #ifndef MAIN_H
 
-const char* product = "Cookies";
-//char* product = "Fire OG";
+const char* product = "Romulan";
+//12.12.1.216
+//char* product = "BlackJack";
+//12.12.1.49
 const char* revision = "3/21/2020";
 
 //setpoint for waterpump to turn on
-int soilsetpoint = 20;
+//int soilsetpoint = 20;
 
-//Fire OG Sensor mapping scale measured when soil wet
-//int sensmap_dry = 920;
-//int sensmap_wet = 690;
-
-//Cookies Soil Sensor mapping scale measured when soil wet
-//int sensmap_dry = 930;
-//int sensmap_wet = 730;
 
 // Wifi Details
 const char* ssid = "Pretty Fly For A Wifi-2.4";
