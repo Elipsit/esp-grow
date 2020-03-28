@@ -115,7 +115,7 @@ WiFiServer server(80);
 
 //This function controlls the auto water function
 void waterpump(){
-  if(AutoPumpMaxCount>3){
+  if(AutoPumpMaxCount>6){
     //do nothing
     Serial.println("Pump has reached max daily runtime");
   }else{
@@ -253,6 +253,7 @@ void setup(){
   }
 
 void loop(){
+
   if (Day > 1)
    ESP.restart();
   
