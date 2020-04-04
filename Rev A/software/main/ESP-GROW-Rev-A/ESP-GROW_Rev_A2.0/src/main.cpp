@@ -55,6 +55,7 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 //EEPROM
 #define EEPROM_SIZE 2048
 
+
 int WetSensCal, DrySensCal;
 const unsigned int soil_addr_wet  = 100;
 const unsigned int soil_addr_dry  = 110;
@@ -85,6 +86,8 @@ int Second=0;
 int HighMillis=0;
 int Rollover=0;
 
+//******Chip ID***********
+
 
 //****Function Definitions***********
 int connect_Wifi();
@@ -101,6 +104,7 @@ void readSerial();
 void SensorCal();
 void PumpThreshold();
 void ScreenUpdate();
+void setDeviceNumber();
 
  //Bitmaps
 void WIFI_bitmap();
@@ -153,6 +157,9 @@ void setup(){
   Serial.println(revision);
   String thisBoard= ARDUINO_BOARD;
   Serial.println(thisBoard);
+
+  //Get CHIPID
+  setDeviceNumber();
 
  //GPIO
   pinMode(pump, OUTPUT);
@@ -246,9 +253,11 @@ void setup(){
   Serial.print(DrySensCal);
   Serial.print("\tWet: ");
   Serial.print(WetSensCal);
-    Serial.print("\tPump Threshold: ");
+  Serial.print("\tPump Threshold: ");
   Serial.print(pump_threhold);
-  Serial.println(" ");
+  Serial.print("MAC: ");
+  Serial.println(WiFi.macAddress());
+  
   readSerial();
   }
 
@@ -266,6 +275,7 @@ void loop(){
     uptime();
     RunWifiClient();
     ScreenUpdate();
+    Serial.printf("\nChipID: %u \t Product: %s", CHIPID,product);
     Serial.printf("\nPump Threshold: %d %% \t Soil Moisture: %d %% \tPump Daily Cycle: %d", pump_threhold,soilval,AutoPumpMaxCount);
     Serial.printf("\nDHT: %4.2f oC \t%4.2f %%RH", t,h);
     Serial.printf("\nUptime: %d:%d:%d:%d", Day,Hour,Minute,Second);
@@ -875,3 +885,20 @@ void pHCal_bitmap(void) {
      time_bmp, time_width, time_height, 1);
      display.display();
   }
+
+
+void setDeviceNumber(){
+
+  Serial.print("CHIPID: "); Serial.println(CHIPID);
+  switch(CHIPID){
+    case 2885726208:
+      product = "BlackJack";
+      break;
+    case 32855:
+      product = "BlackJack";
+      break;
+
+    default:
+       break;
+  }
+}
