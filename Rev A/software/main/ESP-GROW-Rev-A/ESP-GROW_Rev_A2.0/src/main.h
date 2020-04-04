@@ -1,11 +1,7 @@
 #ifndef MAIN_H
 
+//Project Defaults
 const char* product = "Unknown ID";
-//12.12.1.216
-
-//char* product = "BlackJack";
-//12.12.1.49
-//MAC: DC:4F:22:61:0D:21
 const char* revision = "3/21/2020";
 
 
