@@ -1,0 +1,66 @@
+  .basic #ms-sub-form,
+  .basic #ms-sub-form label,
+  .basic #ms-sub-form input{
+    width: auto;
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: auto;
+    height: auto;
+    vertical-align: baseline;
+    line-height: normal; 
+}
+
+
+.basic #ms-sub-form label {
+    margin-bottom: 6px;
+    margin-top: 6px;
+    display: block; 
+}
+
+.basic #ms-sub-form input.placeholdersjs {
+    color: #aaa !important; }
+
+  .basic #ms-sub-form input[type="text"],
+  .basic #ms-sub-form input[type="email"],
+  .basic #ms-sub-form input[type="tel"],
+  .basic #ms-sub-form input[type="url"],
+  .basic #ms-sub-form input[type="date"],
+  .basic #ms-sub-form input[type="number"],
+  .basic #ms-sub-form textarea,
+  .basic #ms-sub-form select {
+    min-height: 32px;
+    width: 100%;
+    max-width: 480px; }
+
+.basic #ms-sub-form input[type="radio"],
+.basic #ms-sub-form input[type="checkbox"]  {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+    clear: none;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 0;
+    height: 16px;
+    margin: -4px 4px 0 0;
+    vertical-align: middle;
+    padding: 0 0 0 0 !important;
+    outline: 0;
+    width: 16px;
+    min-width: 16px;
+}
+
+  .basic #ms-sub-form input[type="number"] {
+    min-width: 40px; 
+  }
+
+  .basic #ms-sub-form input[type="submit"],
+  .basic #ms-sub-form button,
+  .basic #ms-sub-form input[type="button"] {
+    cursor: pointer;
+    display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; }

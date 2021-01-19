@@ -1,0 +1,27 @@
+.jquery-modal {
+	z-index: 99;
+}
+
+#ms-sub-form button{
+	border: solid;
+}
+
+
+
+#ms-sub-form input[type="checkbox"]:checked:before{
+    float: left;
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    font: 600 21px/1 dashicons;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  content: "\f147";
+  margin: -3px 0 0 -5px;
+}
+
+
+
+
+

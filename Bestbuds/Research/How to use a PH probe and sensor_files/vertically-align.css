@@ -1,0 +1,63 @@
+div.valign #ms-sub-form .form-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 5px 0;
+}
+
+div.valign #ms-sub-form .form-block label {
+  flex: 0 0 160px;
+  max-width: 160px;
+}
+
+div.valign #ms-sub-form .form-block label + * {
+  flex: 1 1 220px;
+  height: 32px;
+  max-width: 100%;
+}
+
+
+div.valign #powered-by-container {
+  text-align: center;
+}
+
+div.valign #ms-sub-form .form-block input,
+div.valign #ms-sub-form .form-block input,
+div.valign #ms-sub-form .form-block select {
+  padding: 0 0.7em;
+}
+
+
+div.valign .ms-form-submit-container{
+  text-align: center;
+}
+
+div.valign #sub-button {
+  padding: 0 !important;
+  height: 38px;
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  letter-spacing: .09em;
+}
+
+div.valign #ms-sub-form input[type="radio"],
+div.valign #ms-sub-form input[type="checkbox"]  {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+    clear: none;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 0;
+    height: 16px;
+    margin: -4px 4px 0 0;
+    vertical-align: middle;
+    padding: 0 0 0 0 !important;
+    outline: 0;
+    text-align: center;
+    width: 16px;
+    min-width: 16px;
+}
