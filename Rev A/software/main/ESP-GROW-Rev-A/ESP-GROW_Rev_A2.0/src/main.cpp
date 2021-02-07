@@ -29,11 +29,12 @@ Screen Button - GPIO0
 #include <EEPROM.h>
 #include "main.h"
 #include "bitmaps.h"
+#include "calibrate.h"
+
 //OLED Screen
 #include <Wire.h>  // Include Wire if you're using I2C
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
-
 
 //DHT22
 #include "DHTesp.h"
@@ -49,7 +50,6 @@ Screen Button - GPIO0
 #define OLED_RESET     -1 // // Wemo SCL 
 //#define OLED_RESET     1 // // Wemo SCL 
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
-
 
 
 //EEPROM
@@ -945,7 +945,7 @@ void setDeviceNumber(){
   Serial.print("CHIPID: "); Serial.println(CHIPID);
   switch(CHIPID){
     case 2885726208:
-      product = "BlackJack";
+      product = "TrainWreck";
       break;
     case 654356480:
       product = "Romulan";

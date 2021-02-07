@@ -31,6 +31,9 @@ Screen Button - GPIO0
 #include <Arduino.h>
 #include <EEPROM.h>
 #include "main.h"
+#include "bitmap.h"
+#include "calibrate.h"
+
 //OLED Screen
 #include <Wire.h>  // Include Wire if you're using I2C
 #include <Adafruit_GFX.h>

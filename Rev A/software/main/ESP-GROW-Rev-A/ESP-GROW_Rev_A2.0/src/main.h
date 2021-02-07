@@ -1,13 +1,13 @@
 #ifndef MAIN_H
 
 //Project Defaults
-const char* product = "Unknown ID";
-const char* revision = "3/21/2020";
+const char* product = "TrainWreck";
+const char* revision = "2/6/2020";
 
 
 
 // Wifi Details
-const char* ssid = "Pretty Fly For A Wifi-2.4";
+const char* ssid = "tegridyfarms-2.4";
 const char* password = "supercarbon";
 
 //const char* ssid = "Elipsit-V30";
