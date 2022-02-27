@@ -1,1 +1,2 @@
-Record=TopLevelDocument|FileName=ESP_Grow_Main_Rev_A_1_Con.SchDoc
+Record=TopLevelDocument|FileName=ESP_Grow_Main_Rev_A_1_Con.SchDoc|SheetNumber=1
+Record=NoMainPathDocument|SourceDocument=ESP_Grow_Main_Rev_A_1_Con.SchDoc|FileName=ESP_Grow_Main_Rev_A_2_3V_5V.SchDoc|SheetNumber=2

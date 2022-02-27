@@ -1,10 +1,8 @@
 {
 	"folders": [
 		{
-			"path": "..\\..\\..\\..\\Bestbuds\\code\\main\\bestbuds_v0.1"
-		},
-		{
-			"path": "ESP-GROW_Rev_A2.0-Refactor"
+			"name": "esp-grow-2.0",
+			"path": "..\\..\\..\\..\\..\\esp-grow-2.0\\firmware\\dev\\esp-grow-2.0"
 		}
 	],
 	"settings": {

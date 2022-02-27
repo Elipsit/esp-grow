@@ -1,3 +1,9 @@
+#ifndef BITMAPS_H
+#define BITMAPS_H
+
+#include <Arduino.h>
+
+
 /* Use this as a custom bitmap template
 void testdrawbitmap(void) {
   display.clearDisplay();
@@ -30,9 +36,6 @@ static const unsigned char PROGMEM logo_bmp[] =
   B01110000, B01110000,
   B00000000, B00110000 };
 */
-#ifndef bitmaps_h
-#define bitmaps_h
-#include <Arduino.h>
 
 #define pHCal_width  128
 #define pHCal_height 64

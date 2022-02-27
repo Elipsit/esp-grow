@@ -23,8 +23,10 @@ Screen Button - GPIO0
 *
 ****Status***
 *refactoring code to move things from main to each approrpate header. 
+* Commented out debug code
+*moved pump and soil sensor cal to calibration.cpp
  */
-//****Include Statements*****
+//-----Include Statements-----
 #include <Arduino.h>
 #include <EEPROM.h>
 #include "main.h"
@@ -42,8 +44,8 @@ Screen Button - GPIO0
 #include <ESP8266WiFi.h>
 #include <ArduinoOTA.h>
 
-//****Definitions*****
-//*****OLED 0.96" **********
+//-----Definitions-----
+//-----OLED 0.96" -----
 #define SCREEN_WIDTH 128 // OLED display width, in pixels
 #define SCREEN_HEIGHT 64 // OLED display height, in pixels
 //#define OLED_RESET     4 // Reset pin # (or -1 if sharing Arduino reset pin)
@@ -54,18 +56,6 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 //EEPROM
 #define EEPROM_SIZE 2048
-
-/*
-int WetSensCal, DrySensCal;
-const unsigned int soil_addr_wet  = 100;
-const unsigned int soil_addr_dry  = 110;
-int cal_wet_buf[10];
-int cal_dry_buf[10];
-long unsigned int cal_dry_raw, cal_wet_raw;
-*/
-int pump_threhold;
-const unsigned int pump_threshold_addr = 120;
-
 
 int  soilval, pumpcyc;
 
@@ -79,37 +69,29 @@ int AutoPumpMaxCount=0;
 
 DHTesp dht;
 
-//***Uptime deff***
+//-----Uptime deff-----
 long Day=0;
 int Hour =0;
 int Minute=0;
-int Second=0;
+long int Second=0;
 int HighMillis=0;
 int Rollover=0;
 
-//******Serial Flags*******
-    int incomingByte = 0;
-    extern bool breakFlag = false;
-
-
-//****Function Definitions***********
+// -----Function Definitions-----
 int connect_Wifi();
 void ScreenSetup();
 void waterpump();
 void shortwaterpump();
 void checksensor();
 void uptime();
-void debug();
+//void debug();
 void wifiStatus();
 String prepareHtmlPage();
 void RunWifiClient();
 void readSerial();
-//void SensorCal();
-//void DrySensorCal();
-//void WetSensorCal();
-void PumpThreshold();
 void ScreenUpdate();
 void setDeviceNumber();
+
 
  //Bitmaps
 void WIFI_bitmap();
@@ -119,6 +101,7 @@ void WIFI_bitmap();
  void pressure_bitmap();
  void ADC_bitmap();
  void time_bitmap();
+
 
 WiFiServer server(80);
 
@@ -209,7 +192,7 @@ void setup(){
      {
        if (digitalRead(scrbtn) == LOW)
         {
-         debug();
+         //debug();
         }else
          { 
           int WiFi_Connect_Attempts = 0;
@@ -250,16 +233,19 @@ void setup(){
   server.begin();
   Serial.printf("Web server started, open %s in a web browser\n", WiFi.localIP().toString().c_str());
 
+  SoilSens_Init();
+  /*
   EEPROM.get(soil_addr_dry,DrySensCal);
   EEPROM.get(soil_addr_wet,WetSensCal);
   EEPROM.get(pump_threshold_addr,pump_threhold);
+  */
   Serial.println("Current Calibration Data: ");
   Serial.print("Dry: ");
-  Serial.print(DrySensCal);
+  Serial.print(SensStake.DrySensCal);
   Serial.print("\tWet: ");
-  Serial.print(WetSensCal);
+  Serial.print(SensStake.WetSensCal);
   Serial.print("\tPump Threshold: ");
-  Serial.print(pump_threhold);
+  Serial.print(PUMP.pump_threhold);
   Serial.print("MAC: ");
   Serial.println(WiFi.macAddress());
   
@@ -281,9 +267,9 @@ void loop(){
     RunWifiClient();
     ScreenUpdate();
     Serial.printf("\nChipID: %u \t Product: %s", CHIPID,product);
-    Serial.printf("\nPump Threshold: %d %% \t Soil Moisture: %d %% \tPump Daily Cycle: %d", pump_threhold,soilval,AutoPumpMaxCount);
+    Serial.printf("\nPump Threshold: %d %% \t Soil Moisture: %d %% \tPump Daily Cycle: %d", PUMP.pump_threhold,soilval,AutoPumpMaxCount);
     Serial.printf("\nDHT: %4.2f oC \t%4.2f %%RH", t,h);
-    Serial.printf("\nUptime: %d:%d:%d:%d", Day,Hour,Minute,Second);
+    Serial.printf("\nUptime: %d:%d:%d:%ld", Day,Hour,Minute,Second);
     Serial.println(" ");
     delay(1000);  
     }
@@ -359,18 +345,20 @@ void ScreenSetup(){
     delay(100);  
 }
 
+/*
 void debug (){
+  void SoilSens_Init();
   while (1)
   {
   soilval_raw = analogRead(0);
-  soilval =  (soilval_raw,WetSensCal,DrySensCal,100,0);
+  soilval =  (soilval_raw,SensStake.WetSensCal,SensStake.DrySensCal,100,0);
   delay(dht.getMinimumSamplingPeriod());
    h = dht.getHumidity();
    t = dht.getTemperature();
 
   display.clearDisplay();
   display.setCursor(20, 0); // Set cursor to top-left
-  display.println("Debug Mode");
+  display.println("Debug Mode"); 
   
    //Soil Capacitance Sensor
   display.setCursor(0, 30);
@@ -394,21 +382,21 @@ void debug (){
   delay(100);
   display.display();
   
-  if((soilval<pump_threhold)&(soilval>5)){
+  if((soilval<PUMP.pump_threhold)&(soilval>5)){
     waterpump();
   }
    delay(1000);
   }
-}
+}*/
 
 void checksensor(){
   soilval_raw = analogRead(0);
-  soilval =  map(soilval_raw,WetSensCal,DrySensCal,100,0);
+  soilval =  map(soilval_raw,SensStake.WetSensCal,SensStake.DrySensCal,100,0);
   delay(dht.getMinimumSamplingPeriod());
    h = dht.getHumidity();
    t = dht.getTemperature();
   
-  if((soilval<pump_threhold)&(soilval>5)){
+  if((soilval<PUMP.pump_threhold)&(soilval>5)){
     waterpump();
   }
 }
@@ -641,235 +629,6 @@ void readSerial(){
 
     }while(breakFlag == false);
 }
-/*
-void SensorCal(){ 
-  breakFlag = false;
-  incomingByte = 0;
-  Serial.println("Soil Sensor Calibration");
-  Serial.println("1 - Enter Dry Routine \t 2 - Enter Wet Routine\t N - Continue to main program");
-  Serial.println("");
-  do{
-  if (Serial.available() > 0) {
-      // read the incoming byte:
-      incomingByte = Serial.read();
-  
-      switch (incomingByte){
-        case 49:  //49 == 1
-        Serial.println("Enter Dry Calibration Routine");
-        DrySensorCal();
-        break;
-
-        case 50:  //50 == 2
-        Serial.println("Enter Wet Calibration Routine");
-        WetSensorCal();
-        break;
-      
-        case 110: //110 = N
-        Serial.println("Continued to main program");
-        breakFlag = true;
-        break;
-        
-        default:
-        Serial.println("Invalid input");
-        Serial.println("1 - Enter Dry Routine \t 2 - Enter Wet Routine \n N - To Continue To Main Program");
-        break;
-      }
-
-    }
-
-    }while(breakFlag == false);
-}
-
-
- void DrySensorCal(){
-    incomingByte = 0;
-    breakFlag = false;
-    cal_dry_raw = 0;
-  
-    //---Dry Soil Calibration Routine
-    Serial.println("--- Dry Sensor Calibration Routine ---");
-    Serial.println("Please insert the sensor into a dry medium");
-    Serial.println("Press Y to continue");
-    do{
-      if (Serial.available() > 0) {
-      // read the incoming byte:
-      incomingByte = Serial.read();
-
-      switch (incomingByte){
-        case 121: //121 == Y
-          for (int i = 0; i < 10; i++){
-            cal_dry_buf[i]=analogRead(A0);
-            cal_dry_raw += cal_dry_buf[i];
-          }
-
-        DrySensCal = cal_dry_raw/10;
-        Serial.print("Averaged Dry Sensor ADC Reading: ");
-        Serial.println(DrySensCal);
-        Serial.print(" ");
-        
-        EEPROM.put(soil_addr_dry,DrySensCal);
-        EEPROM.commit();
-        Serial.println("Dry Sensor Value Calibrated");
-        breakFlag = true;
-      break;
-
-        case 110: //110 = n
-          Serial.println("Continued to main program");
-          breakFlag = true;
-          break;
-    
-    default:
-      Serial.println("Enter Y when ready to calibrate for Wet Sensor");
-      break;
-    }
-  }
-  }while(breakFlag == false);
-
-  }
-
-void WetSensorCal(){
-    incomingByte = 0;
-    breakFlag = false;
-    cal_wet_raw = 0;
-  //---Wet Sensor Calibration Routine
-  Serial.println("--- Wet Sensor Calibration Routine ---");
-  Serial.println("Please insert the sensor in a wet medium");
-  Serial.println("Press Y to continue");
-  do{
-    if (Serial.available() > 0) {
-      // read the incoming byte:
-      incomingByte = Serial.read();
-
-      switch (incomingByte)
-      {
-      case 121: //121 == Y
-        for (int i = 0; i < 10; i++){
-          cal_wet_buf[i]=analogRead(A0);
-          cal_wet_raw += cal_wet_buf[i];
-          }
-
-        WetSensCal = cal_wet_raw/10;
-        Serial.print("Averaged Wet Sensor ADC Reading: ");
-        Serial.println(WetSensCal);
-        Serial.print(" ");
-
-        EEPROM.put(soil_addr_wet,WetSensCal);
-        EEPROM.commit();
-
-      Serial.println("Wet Sensor Value Calibrated");
-      breakFlag = true;
-      break;
-
-      case 110: //110 = n
-        Serial.println("Continued to main program");
-        breakFlag = true;
-        break;
-    
-    default:
-      Serial.println("Enter Y when ready to calibrate for Wet Sensor");
-      break;
-    }
-  }
-  }while(breakFlag == false);
-
-}*/
-
-void PumpThreshold(){
- Serial.println("---Pump Threshold Routine---");
-  Serial.println("Select number with the corresponding soil mositure threshold");
-  Serial.println("1 = 20% | 2 = 25% | 3 = 30% | 4 = 35% | 5 = 40% | 6 = 45% | 7 = 50% | 8 = 55% ");
-  incomingByte = 0;
-  breakFlag = false;
-  delay(500);
-  do{
-  if (Serial.available() > 0) {
-      // read the incoming byte:
-      incomingByte = Serial.read();
-  
-      switch (incomingByte){
-          case 49:  //49 == 1
-        Serial.println("Waterpump threshold =  20%");
-        pump_threhold = 20;
-        EEPROM.put(pump_threshold_addr,pump_threhold);
-        EEPROM.commit();
-        breakFlag = true;
-        break;
-
-        case 50:  //50 == 2
-        Serial.println("Waterpump threshold =  25%");
-        pump_threhold = 25;
-        EEPROM.put(pump_threshold_addr,pump_threhold);
-        EEPROM.commit();
-        breakFlag = true;
-        break;
-
-        case 51:  //51 == 3
-        Serial.println("Waterpump threshold =  30%");
-        pump_threhold = 30;
-        EEPROM.put(pump_threshold_addr,pump_threhold);
-        EEPROM.commit();
-        breakFlag = true;
-        break;
-
-        case 52:  //52 == 4
-        Serial.println("Waterpump threshold =  35%");
-        pump_threhold = 35;
-        EEPROM.put(pump_threshold_addr,pump_threhold);
-        EEPROM.commit();
-        breakFlag = true;
-        break;
-
-        case 53:  //53 == 5
-        Serial.println("Waterpump threshold =  40%");
-        pump_threhold = 40;
-        EEPROM.put(pump_threshold_addr,pump_threhold);
-        EEPROM.commit();
-        breakFlag = true;
-        break;
-
-        case 54:  //54 == 6
-        Serial.println("Waterpump threshold =  45%");
-        pump_threhold = 45;
-        EEPROM.put(pump_threshold_addr,pump_threhold);
-        EEPROM.commit();
-        breakFlag = true;
-        break;
-
-        case 55:  //55 == 7
-        Serial.println("Waterpump threshold =  50%");
-        pump_threhold = 50;
-        EEPROM.put(pump_threshold_addr,pump_threhold);
-        EEPROM.commit();
-        breakFlag = true;
-        break;
-
-        case 56:  //56 == 8
-        Serial.println("Waterpump threshold =  55%");
-        pump_threhold = 55;
-        EEPROM.put(pump_threshold_addr,pump_threhold);
-        EEPROM.commit();
-        breakFlag = true;
-        break;
-
-        case 57:  //56 == 9
-        Serial.println("Waterpump threshold =  60%");
-        pump_threhold = 60;
-        EEPROM.put(pump_threshold_addr,pump_threhold);
-        EEPROM.commit();
-        breakFlag = true;
-        break;
-        
-        default:
-        Serial.println("Invalid input");
-        Serial.println("Continue to main program");
-        breakFlag = true;
-        break;
-      }
-
-    }
-  }while(breakFlag == false);
-
-}
 
 int connect_Wifi(){
   int wifi_stat_bar = 0;
@@ -938,7 +697,7 @@ void pHCal_bitmap(void) {
      (display.height() - time_height) / 2,
      time_bmp, time_width, time_height, 1);
      display.display();
-  }
+  } 
 
 
 void setDeviceNumber(){
@@ -955,4 +714,4 @@ void setDeviceNumber(){
     default:
        break;
   }
-}
+} 
